@@ -1,7 +1,7 @@
 <div id="inicio">
     <article id="art">
         <div class="wrapper">
-            <h2>Productos en local</h2>
+            <h2 class="textodeinicio">Productos en local</h2>
             <div class="wrapper">
                 Six Pack Corona Botellin
                 $3.990

@@ -19,7 +19,7 @@
         <h1 id="logo">kuka</h1>
         <div id="me">
             <ul class="menu">
-                <li> <a href="<?=base_url()?>Controlador/cargarInicio" >Inicio</a></li>
+                <li> <a  href="<?=base_url()?>Controlador/cargarInicio" >Inicio</a></li>
                 <li> <a href="#">Acerca de</a>
                     <ul>
                         <li> <a href="#">Historia</a></li>

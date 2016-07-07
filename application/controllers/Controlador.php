@@ -33,7 +33,7 @@ class Controlador extends CI_Controller {
     }
 
     function cargarContent2() {
-        if ($this->session->userdata('login') == true) {
+        if ($this->session->userdata('login2') == true) {
             
                 $data['activo'] = 0;
                 $this->load->view("Cliente", $data);
@@ -79,7 +79,7 @@ class Controlador extends CI_Controller {
             $data['valido'] = true;
             $arreglo = array(
                 "usuario" => $usuario,
-                "login" => true
+                "login2" => true
             );
         } else {
             $data['mensaje'] = "Usuario No Válido";
@@ -162,6 +162,21 @@ class Controlador extends CI_Controller {
         
         $this->load->view("ingresarProducto");
         
+    }
+    
+    function ingresarProducto(){
+        $nombre = $this->input->post("nombrePro");
+        $precio = $this->input->post("precioPro");
+        $stock = $this->input->post("stockPro");
+        $categoria = $this->input->post("categoriaPro");
+        
+        $data = array('nombre_producto' => $nombre,
+            'precio_por_unidad' => $precio,
+            'direccion_local' => $direccion,
+            'telefono' => $telefono,
+            'ciudad' => $ciudad
+            
+        );
     }
 
 }

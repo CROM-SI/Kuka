@@ -34,7 +34,9 @@ class Controlador extends CI_Controller {
 
     function cargarContent2() {
         if ($this->session->userdata('login2') == true) {
-            
+            $data['producto'] = $this->modelo->consultaproducto()->result();
+            $data['usuario'] = $this->session->userdata("usuario");
+
                 $data['activo'] = 0;
                 $this->load->view("Cliente", $data);
             

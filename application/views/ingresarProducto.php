@@ -1,7 +1,7 @@
 <form method="post" action="<?=base_url()?>Controlador/ingresarProducto">
 <div id="form">
     
-    <h3>Ingresar Producto</h3>
+    <h3 class="textoregistrarcliente">Ingresar Producto</h3>
     <h5>Los campos marcados en <h10 class="campoenrojo">*</h10> son obligatorios</h5>
     <br/>
     

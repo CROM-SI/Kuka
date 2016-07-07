@@ -22,9 +22,9 @@
                 <li> <a  href="<?=base_url()?>Controlador/cargarInicio" >Inicio</a></li>
                 <li> <a href="#">Acerca de</a>
                     <ul>
-                        <li> <a href="#">Historia</a></li>
+                        <li> <a href="<?=base_url()?>Controlador/cargarHistoria">Historia</a></li>
                         
-                        <li> <a href="#">Sede</a></li>
+                        <li> <a href="<?=base_url()?>Controlador/cargarSede">Sede</a></li>
                     </ul> 
                 </li>
                 <li> <a href="<?=base_url()?>Controlador/cargarUbicacion" >Ubicacion</a>

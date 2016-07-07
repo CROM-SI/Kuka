@@ -154,9 +154,9 @@ li a, .dropbtn {
 
 }
 
-#btn_login{
+#btn_login2{
 
-    background-color: #4CAF50;
+    background: green;
 }
 
 #sixpack{ display:block; text-indent:-9999px; background:url(../imagenes/six-pack-corona.jpg)no-repeat center;

@@ -18,8 +18,16 @@
     tenemos una gran variedad de productos, para realizar algún pedido. 
  
     Ponte en contacto con el administrador.</h4>
-   
+   <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>
 <div class="col-lg-4">
    <h1 id="fotolocal1"></h1> 
 </div>
+

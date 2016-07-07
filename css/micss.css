@@ -176,6 +176,12 @@ body{
     
 }
 
+.textoregistrarcliente{
+    color: green;
+    
+       
+}
+
 #btn_login{
     
     background-color: #4CAF50;

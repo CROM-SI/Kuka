@@ -1,31 +1,32 @@
 <form method="post" action="<?=base_url()?>Controlador/registrarCliente">
 <div id="form">
     
-    <h3>Registrar Cliente</h3>
+    <h3 class="textoregistrarcliente">Registrar Cliente</h3>
+    <h5 class="campoenrojo">Los campos en * son obligatorios</h5>
+    <br/>
+    Nombre: <input type="text" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" name="nombreCli" class="input" required="true" />
+    <br/>
+    Apellido: <input type="text" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" name="apellidoCli" class="input" required="true" />
+    <br/>
+    Direccion del local: <input style="color:black;margin-left: 2%; margin-bottom:2%; width: 35%;border-radius: 6px" type="text" name="direccionCli" class="input" required="true" />
+    <br/>
+    Telefono: <input type="text" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" name="telefonoCli" class="input" required="true" />
+    <br/>
+    Ciudad: <input type="text" style="color:black;margin-left: 17%; margin-bottom:2%; width: 36%;border-radius: 6px" name="ciudadCli" class="input" required="true" />
+    <br/>
+    Rut: <input type="text" style="color:black;margin-left: 3%; margin-bottom:2%; width: 57%;border-radius: 6px" name="rutCli" class="input" />
+    <br/>
+    Rol del local: <input type="id" style="color:black;margin-left: 26%; margin-bottom:2%;width:25%;border-radius: 6px" name="rolCli" class="input" required="true" />
+    <br/>
+    Nickname: <input type="text" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" name="nicknameCli" class="input" required="true" />
+    <br/>
+    Password: <input type="text" style="color:black;margin-left: 15%; margin-bottom:2%; width: 36%;border-radius: 6px" name="passwordCli" class="input" required="true" />
+    <br/>
     
+    Correo: <input type="text" style="color:black;margin-left: 19%; margin-bottom:2%; width: 36%;border-radius: 6px" name="correoCli" class="input" required="true" />
     <br/>
-    Nombre: <input type="text" name="nombreCli" class="input" required="true" />
-    <br/>
-    Apellido: <input type="text" name="apellidoCli" class="input" required="true" />
-    <br/>
-    Direccion del local: <input type="text" name="direccionCli" class="input" required="true" />
-    <br/>
-    Telefono: <input type="text" name="telefonoCli" class="input" required="true" />
-    <br/>
-    Ciudad: <input type="text" name="ciudadCli" class="input" required="true" />
-    <br/>
-    Rut: <input type="text" name="rutCli" class="input" />
-    <br/>
-    Rol del local: <input type="id" name="rolCli" class="input" required="true" />
-    <br/>
-    Nickname: <input type="text" name="nicknameCli" class="input" required="true" />
-    <br/>
-    Password: <input type="text" name="passwordCli" class="input" required="true" />
-    <br/>
-    
-    Correo: <input type="text" name="correoCli" class="input" required="true" />
-    <br/>
-    <button id="guardarCli">Guardar</button>
+    <br>
+    <button class="btn btn-succes" id="guardarCli">Guardar</button>
     
     
 </div>

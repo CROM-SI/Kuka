@@ -14,7 +14,7 @@
                 <p>Precio : <?= $i->precio_por_unidad  ?></p> 
                 <br><br>
                 
-                 cantidad:  <select id="cantidad" > 
+                 Cantidad:  <select id="cantidad" > 
                  <option disabled selected value="0">Seleccione</option> 
                  
                  <?php for($x=0; $x<=$i->stok_producto;$x++){?> 

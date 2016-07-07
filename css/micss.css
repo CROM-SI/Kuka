@@ -24,6 +24,7 @@ body{
 }
 #footer{
     color:white;
+    margin-top: 12%;
     font-size: 20px;
     font-weight: bolder;
     text-align: center;
@@ -140,7 +141,7 @@ li a, .dropbtn {
     padding-top:2px;width:100%; overflow:hidden;}
 
 .wrapper {width:100%; overflow:hidden; margin: 20px; margin-left: 3px;}
-.textodeinicio {width:20%; overflow:hidden;  margin-left: 550px;}
+.textodeinicio {width:60%; color: white;margin-left: 30%;   text-align: center;}
 .mapa{ margin-left: 440px;}
 .textomapa{
     color:white;

@@ -169,7 +169,7 @@ body{
     padding-top:2px;width:100%; overflow:hidden;}
 
 .wrapper {width:100%; overflow:hidden; margin: 20px; margin-left: 3px;}
-.textodeinicio {width:100%; overflow:hidden; margin: 20px; margin-left: 550px;}
+.textodeinicio {width:20%; overflow:hidden;  margin-left: 550px;}
 .mapa{ margin-left: 440px;}
 .textomapa{
     color:white;

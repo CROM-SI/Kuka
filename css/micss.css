@@ -48,9 +48,11 @@ body{
 }
 .menu{
 	list-style:none;
-	padding:0px;
-	margin:0px;
+	padding:5px;
+	margin:5px;
         margin-left: 20%;
+        margin-right: 20%;
+        align-content: center;
         
 }
 .menu li{

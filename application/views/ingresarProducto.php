@@ -13,7 +13,7 @@
     Categoria: <input type="text" name="categoriaPro" class="input" required="true" />
     <br/>
     
-    <button id="ingresarPro">Guardar</button>
+    <button id="ingresarPro" class="btn btn-succes">Guardar</button>
     
     
 </div>

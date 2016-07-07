@@ -1,7 +1,7 @@
 <form method="post" action="<?=base_url()?>Controlador/registrarCliente">
 <div id="form">
     
-    <h3>registrar cliente</h3>
+    <h3>Registrar Cliente</h3>
     
     <br/>
     Nombre: <input type="text" name="nombreCli" class="input" required="true" />

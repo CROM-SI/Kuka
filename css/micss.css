@@ -13,21 +13,21 @@ body{
     width: 80%;
     text-align: center;
     margin-left: 10%;
-    
+
 }
 #header2{
     margin-top:10%;
     width: 80%;
     text-align: center;
     margin-left: 10%;
-    
+
 }
 #footer{
     color:white;
     font-size: 20px;
     font-weight: bolder;
     text-align: center;
-    
+
 }
 
 #content{
@@ -66,7 +66,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: black;
-    
+
 }
 
 li {
@@ -144,17 +144,17 @@ li a, .dropbtn {
 .mapa{ margin-left: 440px;}
 .textomapa{
     color:white;
-    
+
 }
 
 .textoregistrarcliente{
     color: green;
-    
-       
+
+
 }
 
 #btn_login{
-    
+
     background-color: #4CAF50;
 }
 
@@ -180,7 +180,83 @@ li a, .dropbtn {
     margin-left: 38%;
 
 }
-/*FOTO LOCAL*/
+
+
+.ui-accordion .ui-accordion-content{
+    color: black;
+    font-size: 14px;
+
+}
+
+/*Cambiar las propiedades de la cabecera: background, font-size, font-family ...*/
+
+.ui-accordion .ui-accordion-header{    
+    background: black;
+    color: white;
+    font-size: 18px;
+
+}
+
+
+
+/*Cambiar las propiedades de la tecla activa de la cabecera: background, font-size, font-family ...*/
+
+.ui-accordion .ui-accordion-header-active{
+    background: black;
+}
+
+#btn_regBod{
+    background: green;
+}
+
+#btn_regBod:hover{
+    background: black;
+}
+
+#btn_Prod{
+    background: green;
+}
+#btn_Prod:hover{
+    background:black; 
+}
+
+#btn_regCli{
+    background: green;
+}
+
+#btn_regCli:hover{
+    background: black;
+}
+
+
+#salirAdm{
+    background: green;
+}
+
+#salirAdm:hover{
+    background: black;
+}
+
+
+
+#btn_login{
+    background: green;
+}
+
+
+
+
+.ui-accordion .ui-accordion-header:hover{
+
+    background: green;
+    font-style: italic;
+
+}
+
+
+.botonesMenu{
+    background-color: white;
+}/*FOTO LOCAL*/
 
 #fotolocal1{
     display:block; text-indent:-9999px; background:url(../imagenes/fotolocal1.jpg)no-repeat center;

@@ -118,6 +118,11 @@ class Controlador extends CI_Controller {
         $this->load->view("pedido");
         $this->load->view("footer");
     }
+    function cargarUbicacion(){
+       $this->load->view("header");
+        $this->load->view("ubicacion");
+        $this->load->view("footer"); 
+    }
     
     function cargarRegCli(){
         

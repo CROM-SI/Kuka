@@ -48,10 +48,10 @@ body{
 }
 .menu{
 	list-style:none;
-	padding:5px;
-	margin:5px;
-        margin-left: 20%;
-        margin-right: 20%;
+/*	padding:5px;
+	margin:5px;*/
+        margin-left: 25%;
+/*        margin-right: 400%;*/
         align-content: center;
         
 }
@@ -170,9 +170,16 @@ body{
 
 
 /**/
-#ContactForm{ padding-top:2px;width:100%; overflow:hidden;}
+#ContactForm{
+    color: white;
+    padding-top:2px;width:100%; overflow:hidden;}
 
 .wrapper {width:100%; overflow:hidden; margin: 20px; margin-left: 3px;}
+.mapa{ margin-left: 440px;}
+.textomapa{
+    color:white;
+    
+}
 
 #btn_login{
     

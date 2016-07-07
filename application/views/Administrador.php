@@ -9,7 +9,7 @@
     
     <a href="#" id="btn_regCli" class="" onclick="cargarRegistroCli()" >Registrar nuevo Cliente</a>
     <br><br>
-    <a href="#" id="btn_Prod" class="" onclick="">Ingresar Productos </a>
+    <a href="#" id="btn_Prod" class="" onclick="cargarIngresaPro()">Ingresar Productos </a>
     <br/><br/> <br/><br/>
     <a id="salirAdm"  href="<?=base_url()?>Controlador/salir">Salir</a>
 </div>

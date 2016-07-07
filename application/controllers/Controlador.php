@@ -157,5 +157,11 @@ class Controlador extends CI_Controller {
         $this->load->view("intranet");
         $this->load->view("footer");
     }
+    
+    function cargarIngresarPro(){
+        
+        $this->load->view("ingresarProducto");
+        
+    }
 
 }

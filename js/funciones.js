@@ -107,7 +107,28 @@ function cargarRegistroCli() {
                 $("#menuAdm").hide();
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
-                $("btn_regCli").click(
+                $("#btn_regCli").click(
+                        function () {
+                           
+                        }
+
+                );
+            }
+    )
+}
+
+function cargarIngresaPro() {
+    
+    $.post(
+            base_url + "Controlador/cargarIngresarPro",
+            {
+                    
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_Prod").click(
                         function () {
                            
                         }

@@ -1,9 +1,13 @@
 <div class="col-lg-4">
     <h4 style="color: #ffffff; margin-left: 5%;"  >Quienes Somos</h4>
-    <h7 style="margin-left: 5%;">Somos una
+    <h5 style="margin-left: 5%; ">Somos una
         empresa dedicada a la venta de licores, 
         al por mayor y menos, contamos con una Tienda 
-        de Licores, ubicada en Chorrillos... bla bla</h7>
+        de Licores, ubicada en Chorrillos en donde podras encontrar
+    nuestras gran variedad de licores y otros productos,
+    con grandes ofertas y excelentes precios.
+    
+    Visitanos en la Tienda de Licores </h5>
     
     
 </div>

@@ -9,14 +9,14 @@ body{
 
 }
 #header{
-    margin-top:10%;
+    margin-top:5%;
     width: 80%;
     text-align: center;
     margin-left: 10%;
 
 }
 #header2{
-    margin-top:10%;
+    margin-top:5%;
     width: 80%;
     text-align: center;
     margin-left: 10%;
@@ -266,4 +266,8 @@ li a, .dropbtn {
           height:500px; 
           margin-left: 40%;
           margin-top: -30%;
+}
+
+#contenido{
+    
 }

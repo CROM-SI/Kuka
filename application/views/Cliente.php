@@ -1,7 +1,13 @@
 <div id="content">
     <head>
-        <p>Bienvenido cliente :<?=$usuario?> </p>
+    <center>
         
+       <h3>Bienvenido : <?=$usuario?> </h3>
+         
+    </center>
+    <br><br>
+    <a href="<?=base_url()?>Controlador/cargaralmacen" >almacen</a>
+    <br><br>
     </head>
     <body>
        
@@ -43,9 +49,6 @@
         
     </body>
     
-    
-    
-    <p>Usuario conectado</p>
     <a href="<?=base_url()?>Controlador/salir">Salir</a>
 </div>
 

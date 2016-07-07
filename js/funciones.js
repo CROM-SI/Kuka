@@ -52,10 +52,13 @@ function cargarContent2(){
             $("#paginaLogin2").html(pagina);
             $("#btn_login2").button().click(function(){
                 botonLogin2();
+                
+
             });
         }
     );
 }
+
 
 function botonLogin() {
     $.post(

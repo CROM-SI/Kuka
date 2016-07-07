@@ -181,6 +181,11 @@ class Controlador extends CI_Controller {
         
     }
     
+    function cargaralmacen(){
+        
+         $this->load->view("almacen");
+    }
+    
     function ingresarProducto(){
         $nombre = $this->input->post("nombrePro");
         $precio = $this->input->post("precioPro");

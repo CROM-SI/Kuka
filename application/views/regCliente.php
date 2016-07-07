@@ -1,4 +1,4 @@
-<form>
+<form method="post" action="<?=base_url()?>Controlador/registrarCliente">
 <div id="form">
     
     <h3>registrar cliente</h3>

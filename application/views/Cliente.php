@@ -3,5 +3,5 @@
     <p>Usuario conectado</p>
     <a href="<?=base_url()?>Controlador/salir">Salir</a>
 </div>
-<a>assahhhhhhhhhhsa</a>
+
 

@@ -46,67 +46,6 @@ body{
     border: 2px black solid;
     padding-bottom: 2%;
 }
-/*.menu{
-	list-style:none;
-	padding:5px;
-	margin:5px;
-        margin-left: 25%;
-        margin-right: 400%;
-        align-content: center;
-  
-}    
-        
-
-
-.menu li{
-	margin:0px;
-	padding:0px;
-	float:left;
-	position:relative;
-	box-shadow: 2px 2px 4px 1px #000;	
-}
-.menu li a{
-	display: block;
-	width: 120px;
-	height: 30px;
-	padding: 6px;
-	line-height:30px;
-	text-decoration: none;
-	text-align: center;
-	color: #FFF;
-	background-color: #4CAF50;
-	position: relative;
-	border-left: 2px solid #333;
-
-}
-.menu li a:hover{
-	color:#CF3;
-	background-color:#603;
-}
-.menu ul{
-	position:absolute;
-	left:10px;
-	top:36px;
-	margin:0px;
-	list-style:none;
-	padding:0px;
-	opacity:0;
-	transition:opacity .35s ease .2s;
-	-webkit-transition:opacity .35s ease .2s;
-	-moz-transition:opacity .35s ease .2s;
-	-o-transition:opacity .35s ease .2s;
-	visibility:hidden;	
-}
-.menu ul li a{
-	border-bottom:2px solid #333;
-	border-left:none;
-	display:block;
-	text-align:left;
-}
-.menu li:hover ul{
-	opacity:1;
-	visibility:visible;
-}*/
 
 
 
@@ -126,7 +65,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
+    
 }
 
 li {
@@ -141,44 +81,24 @@ li a, .dropbtn {
     text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
 
-li.dropdown {
-    display: inline-block;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
 
-.dropdown-content a:hover {background-color: #f1f1f1}
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+
 
 
 #iconoface{
     display:block; text-indent:-9999px; background:url(../imagenes/icon4.jpg)no-repeat center;
     width: 10%;
     height: 20px;
-    margin-left: 38%;
+    margin-left: 44%;
+    margin-top: 5%;
     background-size: 50%;
 }
+
+
 
 #tabs{
     margin-top: 3%;

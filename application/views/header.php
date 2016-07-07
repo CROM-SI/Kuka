@@ -34,7 +34,6 @@
 
             <li>  <a href="#">Historia</a> </li>
 
-            <li> <a href="#">Hubicación</a>   </li>
 
             <div  id="menuser">
             <li> <a href="<?= base_url() ?>Controlador/cargarPedido" >Clientes</a></li>

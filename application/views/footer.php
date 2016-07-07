@@ -5,9 +5,9 @@
             <div class="line2 wrapper">
                 <div class="icons">
                     <p id="encabezadofooter">Siguenos</p>
-                    <ul id="icons">
-                        <a href="https://www.facebook.com/botilleria.kukarrox" class="normaltip" id="iconoface" title="Facebook"></a>							
-                    </ul>
+                   
+                        <a  href="https://www.facebook.com/botilleria.kukarrox"  id="iconoface" title="Facebook"></a>							
+                    
                     
                 </div>
                 <div class="info">

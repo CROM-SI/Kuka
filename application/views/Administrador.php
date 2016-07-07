@@ -4,12 +4,12 @@
     <br>
     <br>
 
-    <a href="#" id="btn_regBod" class="" onclick="">Registrar Nuevo Encargado de bodega </a>
+    <a href="#" id="btn_regBod" class="btn btn-succes" onclick="">Registrar Nuevo Encargado de bodega </a>
     <br/><br/>
     
-    <a href="#" id="btn_regCli" class="" onclick="cargarRegistroCli()" >Registrar nuevo Cliente</a>
+    <a href="#" id="btn_regCli" class="btn btn-succes" onclick="cargarRegistroCli()" >Registrar nuevo Cliente</a>
     <br><br>
-    <a href="#" id="btn_Prod" class="" onclick="cargarIngresaPro()">Ingresar Productos </a>
+    <a href="#" id="btn_Prod" class="btn btn-succes" onclick="cargarIngresaPro()">Ingresar Productos </a>
     <br/><br/> <br/><br/>
     <a id="salirAdm"  href="<?=base_url()?>Controlador/salir">Salir</a>
 </div>

@@ -17,6 +17,7 @@
     <body>
 
         <h1 id="logo">kuka</h1>
+<<<<<<< HEAD
 
 
 
@@ -47,5 +48,25 @@
 
 
 
+=======
+        <div id="me">
+            <ul class="menu">
+                <li> <a  href="<?=base_url()?>Controlador/cargarInicio" >Inicio</a></li>
+                <li> <a href="#">Acerca de</a>
+                    <ul>
+                        <li> <a href="<?=base_url()?>Controlador/cargarHistoria">Historia</a></li>
+                        
+                        <li> <a href="<?=base_url()?>Controlador/cargarSede">Sede</a></li>
+                    </ul> 
+                </li>
+                <li> <a href="<?=base_url()?>Controlador/cargarUbicacion" >Ubicacion</a>
+                    
+                </li>
+                <li> <a href="<?=base_url()?>Controlador/cargarPedido" >Pedido</a></li>
+                <li> <a href="<?=base_url()?>Controlador/intranet" >Intranet</a></li>
+            </ul>  
+
+        </div>
+>>>>>>> origin/master
         <br/>
 

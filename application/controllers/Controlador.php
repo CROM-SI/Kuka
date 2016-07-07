@@ -34,7 +34,9 @@ class Controlador extends CI_Controller {
 
     function cargarContent2() {
         if ($this->session->userdata('login2') == true) {
-            
+            $data['producto'] = $this->modelo->consultaproducto()->result();
+            $data['usuario'] = $this->session->userdata("usuario");
+
                 $data['activo'] = 0;
                 $this->load->view("Cliente", $data);
             
@@ -121,6 +123,16 @@ class Controlador extends CI_Controller {
     function cargarUbicacion(){
        $this->load->view("header");
         $this->load->view("ubicacion");
+        $this->load->view("footer"); 
+    }
+    function cargarHistoria(){
+        $this->load->view("header");
+        $this->load->view("historia");
+        $this->load->view("footer"); 
+    }
+    function cargarSede(){
+       $this->load->view("header");
+        $this->load->view("sede");
         $this->load->view("footer"); 
     }
     

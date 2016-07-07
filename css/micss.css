@@ -53,8 +53,11 @@ body{
         margin-left: 25%;
         margin-right: 400%;
         align-content: center;
+  
+}    
         
-}
+
+
 .menu li{
 	margin:0px;
 	padding:0px;
@@ -183,15 +186,6 @@ li.dropdown {
     margin-right: 40px;
     margin-left: 40px;
 }
-
-.wrapper{
-    margin-left: 2px;
-    margin-right: 2px;
-
-}
-
-
-
 /*#text{
     color: #000;
 }*/
@@ -231,10 +225,17 @@ li.dropdown {
     padding-top:2px;width:100%; overflow:hidden;}
 
 .wrapper {width:100%; overflow:hidden; margin: 20px; margin-left: 3px;}
+.textodeinicio {width:20%; overflow:hidden;  margin-left: 550px;}
 .mapa{ margin-left: 440px;}
 .textomapa{
     color:white;
     
+}
+
+.textoregistrarcliente{
+    color: green;
+    
+       
 }
 
 #btn_login{

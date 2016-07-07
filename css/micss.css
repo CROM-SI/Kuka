@@ -180,3 +180,13 @@ li a, .dropbtn {
     margin-left: 38%;
 
 }
+/*FOTO LOCAL*/
+
+#fotolocal1{
+    display:block; text-indent:-9999px; background:url(../imagenes/fotolocal1.jpg)no-repeat center;
+          background-size: 72%; 
+          width:500px;
+          height:500px; 
+          margin-left: 40%;
+          margin-top: -30%;
+}

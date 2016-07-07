@@ -7,6 +7,9 @@ $(document).ready(function(){
         collapsible:true,
         heightStyle:"content"
     });
+   
+  
+    
     $("#mensaje").dialog({
        autoOpen:false,
        modal:true,

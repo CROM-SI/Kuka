@@ -9,7 +9,7 @@
         <script type="text/javascript">
             var base_url = '<?= base_url() ?>';
         </script>
-        
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
               integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
               crossorigin="anonymous">
@@ -17,23 +17,35 @@
     <body>
 
         <h1 id="logo">kuka</h1>
-        <div id="me">
-            <ul class="menu">
-                <li> <a href="<?=base_url()?>Controlador/cargarInicio" >Inicio</a></li>
-                <li> <a href="#">Acerca de</a>
-                    <ul>
-                        <li> <a href="#">Historia</a></li>
-                        
-                        <li> <a href="#">Sede</a></li>
-                    </ul> 
-                </li>
-                <li> <a href="<?=base_url()?>Controlador/cargarUbicacion" >Ubicacion</a>
-                    
-                </li>
-                <li> <a href="<?=base_url()?>Controlador/cargarPedido" >Pedido</a></li>
-                <li> <a href="<?=base_url()?>Controlador/intranet" >Intranet</a></li>
-            </ul>  
 
-        </div>
+
+
+
+        <ul  >
+            <li > <a href="<?= base_url() ?>Controlador/cargarInicio" >Inicio</a></li>
+
+
+
+            <li> <a href="<?= base_url() ?>Controlador/cargarUbicacion" >Ubicacion</a></li>
+           
+            <li><a href="#">Quienes Somos</a></li>
+
+
+            <li>  <a href="#">Historia</a> </li>
+
+            <li> <a href="#">Hubicación</a>   </li>
+
+            <div  id="menuser">
+            <li> <a href="<?= base_url() ?>Controlador/cargarPedido" >Clientes</a></li>
+            <li> <a href="<?= base_url() ?>Controlador/intranet" >Empresa</a></li>
+            </div>
+        </ul>  
+
+
+
+
+
+
+
         <br/>
-        
+

@@ -136,6 +136,7 @@ class Controlador extends CI_Controller {
         $this->load->view("footer"); 
     }
     
+            
     function cargarRegCli(){
         
         $this->load->view("regCliente");

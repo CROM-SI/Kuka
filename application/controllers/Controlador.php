@@ -118,5 +118,44 @@ class Controlador extends CI_Controller {
         $this->load->view("pedido");
         $this->load->view("footer");
     }
+    
+    function cargarRegCli(){
+        
+        $this->load->view("regCliente");
+        
+    }
+    function registrarCliente(){
+        $nombre = $this->input->post("nombreCli");
+        $apellido = $this->input->post("apellidoCli");
+        $rut = $this->input->post("rutCli");
+        $telefono = $this->input->post("telefonoCli");
+        $ciudad = $this->input->post("cuidadCli");
+        $correo = $this->input->post("correoCli");
+        $rol = $this->input->post("rolCli");
+        $nickname = $this->input->post("nicknameCli");
+        $password = $this->input->post("passwordCli");
+        $direccion = $this->input->post("direccionCli");
+        
+
+        $data = array('nombre_cliente' => $nombre,
+            'apellido_cliente' => $apellido,
+            'direccion_local' => $direccion,
+            'telefono' => $telefono,
+            'ciudad' => $ciudad,
+            'rut_cliente' => $rut,
+            'rol_local' => $rol,
+            'nickname' => $nickname,
+            'password' => $password,
+            'id_rol' => 2,
+            'correo' => $correo
+        );
+
+
+        $this->db->insert('cliente', $data);
+        
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
 
 }

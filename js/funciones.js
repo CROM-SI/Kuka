@@ -36,6 +36,11 @@ function cargarContent(){
             $("#btn_login").button().click(function(){
                 botonLogin();
             });
+            $("#btn_regCli").button();
+            $("#btn_regBod").button();
+            $("#btn_Prod").button();
+            $("#salirAdm").button();
+            $("#guardarCli").button();
         }
     );
 }
@@ -90,3 +95,25 @@ function botonLogin2() {
             'json'
             );
 }
+
+function cargarRegistroCli() {
+    
+    $.post(
+            base_url + "Controlador/cargarRegCli",
+            {
+                    
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("btn_regCli").click(
+                        function () {
+                           
+                        }
+
+                );
+            }
+    )
+}
+

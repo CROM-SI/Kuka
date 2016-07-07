@@ -2,7 +2,7 @@
     <head>
     <center>
         
-       <h3>Bienvenido : <?=$usuario?> </h3>
+       <h3>Bienvenido cliente: <?=$usuario?> </h3>
          
     </center>
     <br><br>

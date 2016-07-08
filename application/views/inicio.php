@@ -5,8 +5,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <!--                    class="textodeinicio-->
-                    <h4 style=" margin-left: 40px; color:white;">Lo más vendido</h4> 
-                    <h1 style="margin-left: 1px;" id="lomasvendido">six</h1> 
+                    <h4 style=" margin-left: 58px; color:white;">Lo más vendido</h4> 
+                    <h1 style="margin-left: 8px;" id="lomasvendido">six</h1> 
                 </div>
                 <div class="col-md-4">
                     <h4 style="text-align: center; color:white;">Productos premium</h4> 

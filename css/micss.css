@@ -124,15 +124,6 @@ li a, .dropbtn {
     overflow:hidden;
 }
 
-<<<<<<< HEAD
-.wrapper {width:100%; overflow:hidden; margin: 10px;  }
-.textodeinicio {width:60%; color: white;margin-left: 30%;   text-align: center;}
-.mapa{ margin-left: 220px;}
-.textomapa{
-    color:white;
-    margin-left: 210px;
-
-=======
 .wrapper {
     width:100%; 
     overflow:hidden; 
@@ -140,7 +131,7 @@ li a, .dropbtn {
 }
 
 .mapa{
-    margin-left:440px;
+    margin-left:16%;
 }
 .textodeinicio {
     width:60%;
@@ -149,8 +140,12 @@ li a, .dropbtn {
     text-align:center;
 }
 .textomapa{
-    color:white;
->>>>>>> origin/master
+    color: black;
+    font-weight: bolder;
+    margin-left: 22%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
 }
 .textoregistrarcliente{
     color: green;

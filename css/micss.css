@@ -6,7 +6,7 @@ body{
     background-size: cover;
     color:black;
     width: 99%;
-    }
+}
 
 #logo{ display:block; text-indent:-9999px; background:url(../imagenes/logo-kukarrox.png)no-repeat center;
        background-size: 72%; 
@@ -48,7 +48,7 @@ body{
 
 #menuser{
     margin-left: 82%;
-    
+
 }
 
 ul {
@@ -72,7 +72,7 @@ li {
 }
 
 li a, .dropbtn {
-    
+
     display: inline-block;
     color: black;
     text-align: center;
@@ -167,10 +167,10 @@ li a, .dropbtn {
 
 
 #lomasvendido{ display:block; text-indent:-9999px; background:url(../imagenes/pisco.jpg)no-repeat center;
-          background-size: 90%; 
-          width:260px;
-          height:150px; 
-          margin-left: 40%;
+               background-size: 90%; 
+               width:260px;
+               height:150px; 
+               margin-left: 40%;
 }
 #premium{
 
@@ -270,27 +270,28 @@ li a, .dropbtn {
 
 #fotolocal1{
     display:block; text-indent:-9999px; background:url(../imagenes/fotolocal1.jpg)no-repeat center;
-          background-size: 72%; 
-          width:500px;
-          height:500px; 
-          margin-left: 10%;
-          margin-top: -20%;
+    background-size: 72%; 
+    width:500px;
+    height:500px; 
+    margin-left: 10%;
+    margin-top: -20%;
+
 }
 
 #probando{
     background: rgba(255,255,255,1);
-background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(199,199,199,1)));
-background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
-background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
-background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
-background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7c7c7', GradientType=1 );
-border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
-border: 0px solid #000000;
-    
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(199,199,199,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7c7c7', GradientType=1 );
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
     width: 97%;
     margin-left: 3%;
 }

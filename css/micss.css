@@ -152,7 +152,7 @@ li a, .dropbtn {
     color: white;
     padding-top:2px;width:100%; overflow:hidden;}
 
-.wrapper {width:110%; overflow:hidden; margin: 10px; margin-left: 0px; }
+.wrapper {width:100%; overflow:hidden; margin: 10px;  }
 .textodeinicio {width:60%; color: white;margin-left: 30%;   text-align: center;}
 .mapa{ margin-left: 440px;}
 .textomapa{
@@ -174,26 +174,26 @@ li a, .dropbtn {
     background: green;
 }
 
-#sixpack{ display:block; text-indent:-9999px; background:url(../imagenes/six-pack-corona.jpg)no-repeat center;
-          background-size: 72%; 
+#lomasvendido{ display:block; text-indent:-9999px; background:url(../imagenes/pisco.jpg)no-repeat center;
+          background-size: 90%; 
           width:260px;
           height:150px; 
           margin-left: 40%;
 }
-#jonnypromo{
+#premium{
 
-    display:block; text-indent:-9999px; background:url(../imagenes/promo_jony.jpg)no-repeat center;
+    display:block; text-indent:-9999px; background:url(../imagenes/Bar-Premium.png)no-repeat center;
     background-size: 72%; 
     width:320px;
     height:150px; 
     margin-left: 38%;
 }
-#coronacaja{
-    display:block; text-indent:-9999px; background:url(../imagenes/caja_corona.jpg)no-repeat center;
+#otrosproductos{
+    display:block; text-indent:-9999px; background:url(../imagenes/maraca.jpg)no-repeat center;
     background-size: 72%; 
     width:320px;
     height:150px; 
-    margin-left: 38%;
+    margin-left: 25%;
 
 }
 

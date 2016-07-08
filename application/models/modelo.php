@@ -44,7 +44,7 @@ class Modelo extends CI_Model{
     
     //    consultar los productos 
     function consultaproducto(){
-       $this->db->select('nombre_producto,precio_por_unidad,id_producto,stok_producto,Imagen');
+       $this->db->select('nombre_producto,precio_por_unidad,id_producto,stok_producto');
        $this->db->from("producto");
          $data = $this->db->get();
         return $data;

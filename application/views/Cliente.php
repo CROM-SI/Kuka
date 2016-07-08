@@ -18,7 +18,7 @@
                 <div style="border:2px solid #CF3 ;margin-bottom:5% " >
                    
                    
-                     <img src="../imagen/withe.jpg " width="100" height="200"> 
+                    
                     <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
 
              

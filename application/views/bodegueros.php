@@ -1,6 +1,6 @@
 <div id="form">
     
-    <h3 class="textoregistrarcliente">Registrar encargado de bodega</h3><br/>
+    <h3 class="textoregistrarcliente">Encargados de bodega actuales</h3><br/>
     <table id="table" align="center" border="2" width="300">
         <tr>
             <td align="center"><h5>Nombre</h5></td>

@@ -14,7 +14,7 @@
         <div class="producto" >
             <center >
                <?php foreach ($producto as $i): ?> 
-                <div style="border:2px solid #CF3 ;margin-bottom:5% " >
+                <div style="border:5px solid black; color: black ;margin-bottom:5% " >
                     <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
              
                 <p>Precio : <?= $i->precio_por_unidad  ?></p> 
@@ -34,7 +34,7 @@
                  </select> 
                  
                  <br><br>
-                 <button id="agregarC" style="margin-left: 5%;margin-bottom:5%" value="<?=$i->id_producto?>">Agregar a carrito</button> 
+                 <button id="agregarC" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-primary' value="<?=$i->id_producto?>">Agregar a carrito</button> 
                  </div>
                
             <?php endforeach; ?>
@@ -49,6 +49,6 @@
         
     </body>
     
-    <a href="<?=base_url()?>Controlador/salir">Salir</a>
+    <a id="btn_login4" class="btn btn-succes" style="color: white; " href="<?=base_url()?>Controlador/salir"><b>Salir</b></a>
 </div>
 

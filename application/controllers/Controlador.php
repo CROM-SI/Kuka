@@ -171,7 +171,7 @@ class Controlador extends CI_Controller {
             'rut_cliente' => $rut,
             'rol_local' => $rol,
             'nickname' => $nickname,
-            'password' => $password,
+            'password' => md5($password),
             'id_rol' => 2,
             'correo' => $correo
         );
@@ -203,11 +203,43 @@ class Controlador extends CI_Controller {
         
         $data = array('nombre_producto' => $nombre,
             'precio_por_unidad' => $precio,
-            'direccion_local' => $direccion,
-            'telefono' => $telefono,
+            'stok_producto' => $stock,
+            '' => $telefono,
             'ciudad' => $ciudad
             
         );
+    }
+    
+    function cargarNuevoBodeguero(){
+        $this->load->view("nuevoBodeguero");
+    }
+    
+    function registrarBod(){
+        
+        $nombre = $this->input->post("nombreBod");
+        $apellido = $this->input->post("apellidoBod");
+        $rut = $this->input->post("rutBod");
+        $nickname = $this->input->post("nicknameBod");
+        $password = $this->input->post("passwordBod");
+        
+        $data = array('nombre_usuario' => $nombre,
+            'apellido_usuario' => $apellido,
+            'rut' => $rut,
+            'id_rol' => 3,
+            'nickname' => $nickname,
+            'password' => md5($password));
+            
+            $this->db->insert('usuario', $data);
+        
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+        
+    }
+    
+    function mostrarBod(){
+        $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
+        $this->load->view("bodegueros",$datos);
     }
 
 }

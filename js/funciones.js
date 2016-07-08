@@ -44,6 +44,7 @@ function cargarContent(){
             $("#btn_Prod").button();
             $("#salirAdm").button();
             $("#guardarCli").button();
+            $("#btn_verBod").button();
         }
     );
 }
@@ -135,6 +136,48 @@ function cargarIngresaPro() {
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
                 $("#btn_Prod").click(
+                        function () {
+                           
+                        }
+
+                );
+            }
+    )
+}
+
+function cargarRegistroBod() {
+    
+    $.post(
+            base_url + "Controlador/cargarNuevoBodeguero",
+            {
+                    
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_regBod").click(
+                        function () {
+                           
+                        }
+
+                );
+            }
+    )
+}
+
+function cargarVerBod() {
+    
+    $.post(
+            base_url + "Controlador/mostrarBod",
+            {
+                    
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_verBod").click(
                         function () {
                            
                         }

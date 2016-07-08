@@ -8,7 +8,7 @@ class Modelo extends CI_Model{
          */
         $this->db->select("*");
         $this->db->where('nickname',$nick);
-        $this->db->where('password',$clave);
+        $this->db->where('password',md5($clave));
         $resultado = $this->db->get('usuario');
         if($resultado->num_rows()>0){
             return true;
@@ -21,7 +21,7 @@ class Modelo extends CI_Model{
         
         $this->db->select("*");
         $this->db->where('nickname',$nick);
-        $this->db->where('password',$clave);
+        $this->db->where('password',md5($clave));
         $resultado = $this->db->get('cliente');
         if($resultado->num_rows()>0){
             return true;
@@ -49,7 +49,17 @@ class Modelo extends CI_Model{
          $data = $this->db->get();
         return $data;
     }
-
+    
+    function mostrarBodegueros(){
+       $this->db->select('nombre_usuario,apellido_usuario,rut');
+       $this->db->where("id_rol",3);
+       $res = $this->db->get('usuario');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
     
     
 }

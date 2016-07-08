@@ -231,7 +231,12 @@ li a, .dropbtn {
 #btn_regCli:hover{
     background: black;
 }
-
+#btn_verBod{
+    background: green;
+}
+#btn_verBod:hover{
+    background: black;
+}
 
 #salirAdm{
     background: green;

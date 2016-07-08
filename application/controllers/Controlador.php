@@ -130,13 +130,12 @@ class Controlador extends CI_Controller {
         $this->load->view("historia");
         $this->load->view("footer"); 
     }
-    function cargarSede(){
+    function cargarQuienesSomos(){
        $this->load->view("header");
-        $this->load->view("sede");
+        $this->load->view("quienesomos");
         $this->load->view("footer"); 
     }
-   
-   
+
     function cargarRegCli(){
         
         $this->load->view("regCliente");

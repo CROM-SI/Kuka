@@ -2,11 +2,11 @@
     <head>
     <center>
         
-       <h3>Bienvenido : <?=$usuario?> </h3>
+       <h3>Bienvenido Cliente: <?=$usuario?> </h3>
          
     </center>
     <br><br>
-    <a href="<?=base_url()?>Controlador/cargaralmacen" >almacen</a>
+    <h4><a href="<?=base_url()?>Controlador/cargaralmacen" >Mi carro <span class="glyphicon glyphicon-shopping-cart"></span></a></h4>
     <br><br>
     </head>
     <body>

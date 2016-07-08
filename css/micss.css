@@ -9,25 +9,26 @@ body{
 
 }
 #header{
-    margin-top:10%;
+    margin-top:5%;
     width: 80%;
     text-align: center;
     margin-left: 10%;
-    
+
 }
 #header2{
-    margin-top:10%;
+    margin-top:5%;
     width: 80%;
     text-align: center;
     margin-left: 10%;
-    
+
 }
 #footer{
     color:white;
+    margin-top: 12%;
     font-size: 20px;
     font-weight: bolder;
     text-align: center;
-    
+
 }
 
 #content{
@@ -53,7 +54,7 @@ body{
        background-size: 72%; 
        width:260px;
        height:150px; 
-       margin-left: 40%;
+       margin-left: 4%;
 }
 
 #menuser{
@@ -66,7 +67,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: black;
-    
+
 }
 
 li {
@@ -90,6 +91,9 @@ li a, .dropbtn {
     background-size: 50%;
 }
 
+.campoenrojo{
+    color: red;
+}
 
 
 #tabs{
@@ -137,22 +141,22 @@ li a, .dropbtn {
     padding-top:2px;width:100%; overflow:hidden;}
 
 .wrapper {width:100%; overflow:hidden; margin: 20px; margin-left: 3px;}
-.textodeinicio {width:20%; overflow:hidden;  margin-left: 550px;}
+.textodeinicio {width:60%; color: white;margin-left: 30%;   text-align: center;}
 .mapa{ margin-left: 440px;}
 .textomapa{
     color:white;
-    
+
 }
 
 .textoregistrarcliente{
     color: green;
-    
-       
+
+
 }
 
-#btn_login{
-    
-    background-color: #4CAF50;
+#btn_login2{
+
+    background: green;
 }
 
 #sixpack{ display:block; text-indent:-9999px; background:url(../imagenes/six-pack-corona.jpg)no-repeat center;
@@ -176,4 +180,94 @@ li a, .dropbtn {
     height:150px; 
     margin-left: 38%;
 
+}
+
+
+.ui-accordion .ui-accordion-content{
+    color: black;
+    font-size: 14px;
+
+}
+
+/*Cambiar las propiedades de la cabecera: background, font-size, font-family ...*/
+
+.ui-accordion .ui-accordion-header{    
+    background: black;
+    color: white;
+    font-size: 18px;
+
+}
+
+
+
+/*Cambiar las propiedades de la tecla activa de la cabecera: background, font-size, font-family ...*/
+
+.ui-accordion .ui-accordion-header-active{
+    background: black;
+}
+
+#btn_regBod{
+    background: green;
+}
+
+#btn_regBod:hover{
+    background: black;
+}
+
+#btn_Prod{
+    background: green;
+}
+#btn_Prod:hover{
+    background:black; 
+}
+
+#btn_regCli{
+    background: green;
+}
+
+#btn_regCli:hover{
+    background: black;
+}
+
+
+#salirAdm{
+    background: green;
+}
+
+#salirAdm:hover{
+    background: black;
+}
+
+
+
+#btn_login{
+    background: green;
+}
+
+
+
+
+.ui-accordion .ui-accordion-header:hover{
+
+    background: green;
+    font-style: italic;
+
+}
+
+
+.botonesMenu{
+    background-color: white;
+}/*FOTO LOCAL*/
+
+#fotolocal1{
+    display:block; text-indent:-9999px; background:url(../imagenes/fotolocal1.jpg)no-repeat center;
+          background-size: 72%; 
+          width:500px;
+          height:500px; 
+          margin-left: 40%;
+          margin-top: -30%;
+}
+
+#contenido{
+    
 }

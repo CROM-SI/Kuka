@@ -29,12 +29,16 @@
 
             <li> <a href="<?= base_url() ?>Controlador/cargarUbicacion" >Ubicacion</a></li>
            
-            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="<?= base_url() ?>Controlador/cargarQuienesSomos">Quienes Somos</a></li>
 
 
-            <li>  <a href="#">Historia</a> </li>
+            <li>  <a href="<?= base_url() ?>Controlador/cargarHistoria">Historia</a> </li>
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
 
             <div  id="menuser">
             <li> <a href="<?= base_url() ?>Controlador/cargarPedido" >Clientes</a></li>

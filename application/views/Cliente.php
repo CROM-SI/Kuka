@@ -14,17 +14,17 @@
         <div class="producto" >
             <center >
                <?php foreach ($producto as $i): ?> 
-<<<<<<< HEAD
+
                 <div style="border:2px solid #CF3 ;margin-bottom:5% " >
                    
                    
                      <img src="../imagen/withe.jpg " width="100" height="200"> 
                     
                 <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
-=======
-                <div style="border:5px solid black; color: black ;margin-bottom:5% " >
+
+                
                     <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
->>>>>>> origin/master
+
              
                 <p>Precio : <?= $i->precio_por_unidad  ?></p> 
                 
@@ -42,7 +42,7 @@
 <!--                 <option value="<?= $i->id_producto; ?>"><?= $i->stok_producto; ?></option> -->
                 
                  </select> 
-                 
+                
                  <br><br>
                  <button id="agregarC" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-succes' value="<?=$i->id_producto?>">Agregar a carrito</button> 
                  </div>

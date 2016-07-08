@@ -34,7 +34,7 @@
                  </select> 
                  
                  <br><br>
-                 <button id="agregarC" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-primary' value="<?=$i->id_producto?>">Agregar a carrito</button> 
+                 <button id="agregarC" style="margin-left: 5%;margin-bottom:5%;" class='btn btn-succes' value="<?=$i->id_producto?>">Agregar a carrito</button> 
                  </div>
                
             <?php endforeach; ?>

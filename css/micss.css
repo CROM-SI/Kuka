@@ -143,9 +143,10 @@ li a, .dropbtn {
 
 .wrapper {width:100%; overflow:hidden; margin: 10px;  }
 .textodeinicio {width:60%; color: white;margin-left: 30%;   text-align: center;}
-.mapa{ margin-left: 440px;}
+.mapa{ margin-left: 220px;}
 .textomapa{
     color:white;
+    margin-left: 210px;
 
 }
 

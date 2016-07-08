@@ -24,7 +24,7 @@
 
 
 
-
+        
         <ul  >
             <li > <a href="<?= base_url() ?>Controlador/cargarInicio" >Inicio</a></li>
 
@@ -40,4 +40,6 @@
         </ul>  
 
         <br/>
-
+<div id="probando">
+            
+       

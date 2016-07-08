@@ -6,9 +6,7 @@ body{
     background-size: cover;
     color:black;
     width: 99%;
-    
-
-}
+    }
 
 #logo{ display:block; text-indent:-9999px; background:url(../imagenes/logo-kukarrox.png)no-repeat center;
        background-size: 72%; 
@@ -16,20 +14,8 @@ body{
        height:150px; 
        margin-left: 11%;
 }
-#header{
-    margin-top:5%;
-    width: 80%;
-    text-align: center;
-    margin-left: 10%;
 
-}
-#header2{
-    margin-top:5%;
-    width: 80%;
-    text-align: center;
-    margin-left: 10%;
 
-}
 #footer{
     color:white;
     margin-top: 12%;
@@ -66,20 +52,19 @@ body{
 }
 
 ul {
-    list-style-type: none;
+    list-style-type:none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #999;
     font-size: 12px;
     margin-left: 3%;
-    
-    
-    
-        text-transform: uppercase;
+    text-transform: uppercase;
     text-shadow: 0 1px 0 green;
     letter-spacing: 2px;
     font-weight: bolder;
+    border-radius: 10px 10px 10px 10px;
+
 }
 
 li {
@@ -87,8 +72,9 @@ li {
 }
 
 li a, .dropbtn {
+    
     display: inline-block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -150,7 +136,10 @@ li a, .dropbtn {
 /**/
 #ContactForm{
     color: white;
-    padding-top:2px;width:100%; overflow:hidden;}
+    padding-top:2px;
+    width:100%; 
+    overflow:hidden;
+}
 
 .wrapper {width:100%; overflow:hidden; margin: 10px;  }
 .textodeinicio {width:60%; color: white;margin-left: 30%;   text-align: center;}
@@ -166,13 +155,16 @@ li a, .dropbtn {
 
 }
 
-#btn_login2{
+#btn_login{
+    background: green;
+    margin-left: 45%;
+}
 
+#btn_login2{
     background: green;
+    margin-left: 45%;
 }
-#btn_login4{
-    background: green;
-}
+
 
 #lomasvendido{ display:block; text-indent:-9999px; background:url(../imagenes/pisco.jpg)no-repeat center;
           background-size: 90%; 
@@ -260,9 +252,6 @@ li a, .dropbtn {
 
 
 
-#btn_login{
-    background: green;
-}
 
 
 
@@ -284,12 +273,26 @@ li a, .dropbtn {
           background-size: 72%; 
           width:500px;
           height:500px; 
-          margin-left: 40%;
-          margin-top: -30%;
+          margin-left: 10%;
+          margin-top: -20%;
 }
 
-#contenido{
+#probando{
+    background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(199,199,199,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(199,199,199,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c7c7c7', GradientType=1 );
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
     
+    width: 97%;
+    margin-left: 3%;
 }
 
 

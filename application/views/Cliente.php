@@ -19,10 +19,6 @@
                    
                    
                      <img src="../imagen/withe.jpg " width="100" height="200"> 
-                    
-                <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
-
-                
                     <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
 
              
@@ -54,7 +50,7 @@
                 
             
        
-        
+      
        
         
     </body>

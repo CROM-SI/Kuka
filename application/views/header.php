@@ -9,6 +9,8 @@
         <script type="text/javascript">
             var base_url = '<?= base_url() ?>';
         </script>
+        <script type="text/javascript" src="jquery.js"></script>
+
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
               integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
@@ -25,7 +27,7 @@
         <ul  >
             <li > <a href="<?= base_url() ?>Controlador/cargarInicio" >Inicio</a></li>
 
-            <li> <a href="<?= base_url() ?>Controlador/cargarUbicacion" >Ubicacion</a></li>
+            <li> <a href="<?= base_url() ?>Controlador/cargarUbicacion" >Ubicación</a></li>
            
             <li><a href="<?= base_url() ?>Controlador/cargarQuienesSomos">Quienes Somos</a></li>
 

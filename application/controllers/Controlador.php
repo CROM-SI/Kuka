@@ -37,9 +37,8 @@ class Controlador extends CI_Controller {
             $data['producto'] = $this->modelo->consultaproducto()->result();
             $data['usuario'] = $this->session->userdata("usuario");
 
-                $data['activo'] = 0;
-                $this->load->view("Cliente", $data);
-            
+            $data['activo'] = 0;
+            $this->load->view("Cliente", $data);
         } else {
             $data['activo'] = 1;
             $this->load->view("contenido2", $data);
@@ -76,7 +75,7 @@ class Controlador extends CI_Controller {
         $clave = $this->input->post("clave");
         $resultado = $this->modelo->validarLogin2($usuario, $clave);
         if ($resultado == true) {
-            
+
             $data['mensaje'] = "Usuario Válido";
             $data['valido'] = true;
             $arreglo = array(
@@ -100,8 +99,15 @@ class Controlador extends CI_Controller {
         $this->load->view("pedido");
         $this->load->view("footer");
     }
+
     function salir2() {
         $this->session->sess_destroy();
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
+
+    function volver() {
         $this->load->view("header");
         $this->load->view("intranet");
         $this->load->view("footer");
@@ -128,29 +134,31 @@ class Controlador extends CI_Controller {
         $this->load->view("pedido");
         $this->load->view("footer");
     }
-    function cargarUbicacion(){
-       $this->load->view("header");
-        $this->load->view("ubicacion");
-        $this->load->view("footer"); 
-    }
-    function cargarHistoria(){
+
+    function cargarUbicacion() {
         $this->load->view("header");
-        $this->load->view("historia");
-        $this->load->view("footer"); 
-    }
-    function cargarQuienesSomos(){
-       $this->load->view("header");
-        $this->load->view("quienesomos");
-        $this->load->view("footer"); 
+        $this->load->view("ubicacion");
+        $this->load->view("footer");
     }
 
-    function cargarRegCli(){
-        
-        $this->load->view("regCliente");
-       
-     
+    function cargarHistoria() {
+        $this->load->view("header");
+        $this->load->view("historia");
+        $this->load->view("footer");
     }
-    function registrarCliente(){
+
+    function cargarQuienesSomos() {
+        $this->load->view("header");
+        $this->load->view("quienesomos");
+        $this->load->view("footer");
+    }
+
+    function cargarRegCli() {
+
+        $this->load->view("regCliente");
+    }
+
+    function registrarCliente() {
         $nombre = $this->input->post("nombreCli");
         $apellido = $this->input->post("apellidoCli");
         $rut = $this->input->post("rutCli");
@@ -161,7 +169,7 @@ class Controlador extends CI_Controller {
         $nickname = $this->input->post("nicknameCli");
         $password = $this->input->post("passwordCli");
         $direccion = $this->input->post("direccionCli");
-        
+
 
         $data = array('nombre_cliente' => $nombre,
             'apellido_cliente' => $apellido,
@@ -178,68 +186,127 @@ class Controlador extends CI_Controller {
 
 
         $this->db->insert('cliente', $data);
-        
+
         $this->load->view("header");
         $this->load->view("intranet");
         $this->load->view("footer");
     }
-    
-    function cargarIngresarPro(){
+
+    function cargarIngresarPro() {
         
-        $this->load->view("ingresarProducto");
-        
+        $dato['arrCategorias'] = $this->modelo->consultaCategoria();
+        $this->load->view("ingresarProducto",$dato);
     }
-    
-    function cargaralmacen(){
-        
-         $this->load->view("almacen");
+
+    function cargaralmacen() {
+
+        $this->load->view("almacen");
     }
-    
-    function ingresarProducto(){
+
+    function ingresarProducto() {
         $nombre = $this->input->post("nombrePro");
         $precio = $this->input->post("precioPro");
         $stock = $this->input->post("stockPro");
-        $categoria = $this->input->post("categoriaPro");
-        
+        $categoria = $this->input->post("categoria");
+
         $data = array('nombre_producto' => $nombre,
             'precio_por_unidad' => $precio,
             'stok_producto' => $stock,
-            '' => $telefono,
-            'ciudad' => $ciudad
-            
+            'id_categoria' => $categoria
+                
         );
+        $this->db->insert('producto', $data);
+
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
     }
-    
-    function cargarNuevoBodeguero(){
+
+    function cargarNuevoBodeguero() {
         $this->load->view("nuevoBodeguero");
     }
-    
-    function registrarBod(){
-        
+
+    function registrarBod() {
+
         $nombre = $this->input->post("nombreBod");
         $apellido = $this->input->post("apellidoBod");
         $rut = $this->input->post("rutBod");
         $nickname = $this->input->post("nicknameBod");
         $password = $this->input->post("passwordBod");
-        
+
         $data = array('nombre_usuario' => $nombre,
             'apellido_usuario' => $apellido,
             'rut' => $rut,
             'id_rol' => 3,
             'nickname' => $nickname,
             'password' => md5($password));
-            
-            $this->db->insert('usuario', $data);
-        
+
+        $this->db->insert('usuario', $data);
+
         $this->load->view("header");
         $this->load->view("intranet");
         $this->load->view("footer");
-        
-    }
-    
-    function mostrarBod(){
-        $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
-        $this->load->view("bodegueros",$datos);
     }
 
+    function mostrarBod() {
+        $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
+        $this->load->view("bodegueros", $datos);
+    }
+
+    function eliminarBod() {
+        $id = $this->uri->segment(3);
+        $this->modelo->eliminarBodeguero($id);
+
+
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
+
+    function cargarEditarBod() {
+
+        $id = $this->uri->segment(3);
+        $obtenerNombre = $this->modelo->obtenerNombre($id);
+
+        if ($obtenerNombre != FALSE) {
+            foreach ($obtenerNombre->result() as $row) {
+                $nombre = $row->nombre_usuario;
+                $apellido = $row->apellido_usuario;
+                $rut = $row->rut;
+                $nickname = $row->nickname;
+            }
+
+            $data = array('id_usuario' => $id,
+                'nombre_usuario' => $nombre,
+                'apellido_usuario' => $apellido,
+                'rut' => $rut,
+                'nickname' => $nickname,
+            );
+        } else {
+            $data = "";
+            return FALSE;
+        }
+
+        $this->load->view("header");
+        $this->load->view("editarBod", $data);
+        $this->load->view("footer");
+    }
+
+    function editarBod() {
+        $id = $this->uri->segment(3);
+        $data = array(
+            'nombre_usuario' => $this->input->post("nombreBodE"),
+            'apellido_usuario' => $this->input->post("apellidoBodE"),
+            'rut' => $this->input->post("rutBodE"),
+            'nickname' => $this->input->post("nicknameBodE")
+        );
+
+        $this->modelo->editarBodeguero($id, $data);
+
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
+
+    
 }

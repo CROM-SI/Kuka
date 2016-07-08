@@ -1,72 +1,82 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $("#header").accordion({
-        collapsible:true,
-        heightStyle:"content"
+        collapsible: true,
+        heightStyle: "content"
     });
     $("#header2").accordion({
-        collapsible:true,
-        heightStyle:"content"
+        collapsible: true,
+        heightStyle: "content"
     });
-   
-  
-    
+
+
+
     $("#mensaje").dialog({
-       autoOpen:false,
-       modal:true,
-       buttons:{
-           Ok: function(){
-               $(this).dialog("close");
-           }
-       }
-   });
-   $("#mensaje2").dialog({
-       autoOpen:false,
-       modal:true,
-       buttons:{
-           Ok: function(){
-               $(this).dialog("close");
-           }
-       }
-   });
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            Ok: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+    $("#ventanaEli").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            Ok: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+    $("#mensaje2").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            Ok: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
     cargarContent();
     cargarContent2();
 });
-function cargarContent(){
-   $.post(
-        base_url+"Controlador/cargarContent",{},
-        function(pagina){
-            $("#paginaLogin").html(pagina);
-            $("#btn_login").button().click(function(){
-                botonLogin();
-            });
-            $("#btn_regCli").button();
-            $("#btn_regBod").button();
-            $("#btn_Prod").button();
-            $("#salirAdm").button();
-            $("#guardarCli").button();
-            $("#btn_verBod").button();
-        }
+function cargarContent() {
+    $.post(
+            base_url + "Controlador/cargarContent", {},
+            function (pagina) {
+                $("#paginaLogin").html(pagina);
+                $("#btn_login").button().click(function () {
+                    botonLogin();
+                });
+                $("#btn_regCli").button();
+                $("#btn_regBod").button();
+                $("#btn_Prod").button();
+                $("#salirAdm").button();
+                $("#guardarCli").button();
+                $("#btn_verBod").button();
+
+            }
     );
 }
 
-function cargarContent2(){
-   $.post(
-        base_url+"Controlador/cargarContent2",{},
-        function(pagina){
-            $("#paginaLogin2").html(pagina);
-            $("#btn_login2").button().click(function(){
-                botonLogin2();
-                
+function cargarContent2() {
+    $.post(
+            base_url + "Controlador/cargarContent2", {},
+            function (pagina) {
+                $("#paginaLogin2").html(pagina);
+                $("#btn_login2").button().click(function () {
+                    botonLogin2();
 
-            });
-        }
+
+                });
+            }
     );
 }
 
 
 function botonLogin() {
     $.post(
-            base_url+"Controlador/validaLogin",
+            base_url + "Controlador/validaLogin",
             {
                 usuario: $("#nickname").val(),
                 clave: $("#password").val()
@@ -85,7 +95,7 @@ function botonLogin() {
 }
 function botonLogin2() {
     $.post(
-            base_url+"Controlador/validaLogin2",
+            base_url + "Controlador/validaLogin2",
             {
                 usuario: $("#nickname2").val(),
                 clave: $("#password2").val()
@@ -104,11 +114,10 @@ function botonLogin2() {
 }
 
 function cargarRegistroCli() {
-    
+
     $.post(
             base_url + "Controlador/cargarRegCli",
             {
-                    
             },
             function (pagina) {
                 $("#menuAdm").hide();
@@ -116,7 +125,7 @@ function cargarRegistroCli() {
                 $("#menuAdm").show('fast');
                 $("#btn_regCli").click(
                         function () {
-                           
+
                         }
 
                 );
@@ -125,11 +134,10 @@ function cargarRegistroCli() {
 }
 
 function cargarIngresaPro() {
-    
+
     $.post(
             base_url + "Controlador/cargarIngresarPro",
             {
-                    
             },
             function (pagina) {
                 $("#menuAdm").hide();
@@ -137,7 +145,7 @@ function cargarIngresaPro() {
                 $("#menuAdm").show('fast');
                 $("#btn_Prod").click(
                         function () {
-                           
+
                         }
 
                 );
@@ -146,11 +154,10 @@ function cargarIngresaPro() {
 }
 
 function cargarRegistroBod() {
-    
+
     $.post(
             base_url + "Controlador/cargarNuevoBodeguero",
             {
-                    
             },
             function (pagina) {
                 $("#menuAdm").hide();
@@ -158,7 +165,7 @@ function cargarRegistroBod() {
                 $("#menuAdm").show('fast');
                 $("#btn_regBod").click(
                         function () {
-                           
+
                         }
 
                 );
@@ -167,11 +174,10 @@ function cargarRegistroBod() {
 }
 
 function cargarVerBod() {
-    
+
     $.post(
             base_url + "Controlador/mostrarBod",
             {
-                    
             },
             function (pagina) {
                 $("#menuAdm").hide();
@@ -179,11 +185,39 @@ function cargarVerBod() {
                 $("#menuAdm").show('fast');
                 $("#btn_verBod").click(
                         function () {
-                           
+
+                        }
+
+                );
+
+                $(".btn_eliminar").button();
+                $(".btn_editar").button();
+                
+                
+                
+            }
+    )
+}
+
+function cargarEditar() {
+
+    $.post(
+            base_url + "Controlador/cargarEditar",
+            {
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_editarBod").click(
+                        function () {
+
                         }
 
                 );
             }
     )
 }
+
+
 

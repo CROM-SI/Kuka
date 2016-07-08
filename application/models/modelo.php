@@ -51,7 +51,7 @@ class Modelo extends CI_Model{
     }
     
     function mostrarBodegueros(){
-       $this->db->select('nombre_usuario,apellido_usuario,rut');
+       $this->db->select("*");
        $this->db->where("id_rol",3);
        $res = $this->db->get('usuario');
         if($res->num_rows()>0){
@@ -61,6 +61,34 @@ class Modelo extends CI_Model{
         }
     }
     
+    function eliminarBodeguero($id){
+        $this->db->where('id_usuario',$id);
+        $this->db->delete('usuario');
+    }
+    
+    function obtenerNombre($id){
+        $this->db->where('id_usuario',$id);
+        $res = $this->db->get('usuario');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+    
+    function editarBodeguero($id,$data){
+        $this->db->where('id_usuario',$id);
+        $this->db->update('usuario',$data);
+    }
+    
+    function consultaCategoria() {
+
+        $this->db->order_by('nombre_categoria', 'asc');
+        $categoria = $this->db->get("categoria");
+        if ($categoria->num_rows() > 0) {
+            return $categoria->result();
+        }
+    }
     
 }
 ?>

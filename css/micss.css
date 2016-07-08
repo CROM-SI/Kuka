@@ -6,7 +6,15 @@ body{
     background-size: cover;
     color:black;
     width: 99%;
+    
 
+}
+
+#logo{ display:block; text-indent:-9999px; background:url(../imagenes/logo-kukarrox.png)no-repeat center;
+       background-size: 72%; 
+       width:260px;
+       height:150px; 
+       margin-left: 11%;
 }
 #header{
     margin-top:5%;
@@ -50,15 +58,11 @@ body{
 
 
 
-#logo{ display:block; text-indent:-9999px; background:url(../imagenes/logo-kukarrox.png)no-repeat center;
-       background-size: 72%; 
-       width:260px;
-       height:150px; 
-       margin-left: 4%;
-}
+
 
 #menuser{
-    margin-left: 85%;
+    margin-left: 82%;
+    
 }
 
 ul {
@@ -67,7 +71,15 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: black;
-
+    font-size: 12px;
+    margin-left: 3%;
+    
+    
+    
+        text-transform: uppercase;
+    text-shadow: 0 1px 0 green;
+    letter-spacing: 2px;
+    font-weight: bolder;
 }
 
 li {
@@ -140,7 +152,7 @@ li a, .dropbtn {
     color: white;
     padding-top:2px;width:100%; overflow:hidden;}
 
-.wrapper {width:100%; overflow:hidden; margin: 20px; margin-left: 3px;}
+.wrapper {width:110%; overflow:hidden; margin: 10px; margin-left: 0px; }
 .textodeinicio {width:60%; color: white;margin-left: 30%;   text-align: center;}
 .mapa{ margin-left: 440px;}
 .textomapa{
@@ -279,3 +291,5 @@ li a, .dropbtn {
 #contenido{
     
 }
+
+

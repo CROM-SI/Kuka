@@ -34,10 +34,7 @@
 
             <li>  <a href="#">Historia</a> </li>
 
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/master
+
 
             <div  id="menuser">
             <li> <a href="<?= base_url() ?>Controlador/cargarPedido" >Clientes</a></li>

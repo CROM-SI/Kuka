@@ -15,9 +15,14 @@
             <center >
                <?php foreach ($producto as $i): ?> 
                 <div style="border:2px solid #CF3 ;margin-bottom:5% " >
-                    <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
+                   
+                   
+                     <img src="../imagen/withe.jpg " width="100" height="200"> 
+                    
+                <p>Nombre Producto :<?= $i->nombre_producto  ?></p>
              
                 <p>Precio : <?= $i->precio_por_unidad  ?></p> 
+                
                 <br><br>
                 
                  Cantidad:  <select id="cantidad" > 

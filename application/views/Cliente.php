@@ -55,6 +55,6 @@
         
     </body>
     
-    <a id="btn_login4" class="btn btn-succes" style="color: white; " href="<?=base_url()?>Controlador/salir"><b>Salir</b></a>
+    <a id="salirCliente" class="btn btn-succes" style="color: white; " href="<?=base_url()?>Controlador/salir"><b>Salir</b></a>
 </div>
 

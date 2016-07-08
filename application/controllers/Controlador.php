@@ -96,7 +96,15 @@ class Controlador extends CI_Controller {
 
     function salir() {
         $this->session->sess_destroy();
-        redirect(base_url());
+        $this->load->view("header");
+        $this->load->view("pedido");
+        $this->load->view("footer");
+    }
+    function salir2() {
+        $this->session->sess_destroy();
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
     }
 
     function redCliente() {
@@ -139,7 +147,8 @@ class Controlador extends CI_Controller {
     function cargarRegCli(){
         
         $this->load->view("regCliente");
-        
+       
+     
     }
     function registrarCliente(){
         $nombre = $this->input->post("nombreCli");

@@ -168,13 +168,13 @@ function cargarRegistroBod() {
                         function () {
 
                             regBodega();
-                            $("nombreBod").val('');
-                            $("apellidoBod").val('');
-                            $("rutBod").val('');
-                            $("digitoBod").val('');
-                            $("nicknameBod").val('');
-                            $("passwordBod").val('');
-                            $("nombreBod").focus();
+                            $("#nombreBod").val('');
+                            $("#apellidoBod").val('');
+                            $("#rutBod").val('');
+                            $("#digitoBod").val('');
+                            $("#nicknameBod").val('');
+                            $("#passwordBod").val('');
+                            $("#nombreBod").focus();
                         }
 
                 );

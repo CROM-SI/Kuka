@@ -193,9 +193,9 @@ class Controlador extends CI_Controller {
     }
 
     function cargarIngresarPro() {
-        
+
         $dato['arrCategorias'] = $this->modelo->consultaCategoria();
-        $this->load->view("ingresarProducto",$dato);
+        $this->load->view("ingresarProducto", $dato);
     }
 
     function cargaralmacen() {
@@ -213,7 +213,6 @@ class Controlador extends CI_Controller {
             'precio_por_unidad' => $precio,
             'stok_producto' => $stock,
             'id_categoria' => $categoria
-                
         );
         $this->db->insert('producto', $data);
 
@@ -231,29 +230,36 @@ class Controlador extends CI_Controller {
         $nombre = $this->input->post("nombre");
         $apellido = $this->input->post("apellido");
         $rut = $this->input->post("rut");
-        $dig = $this->input->post("dig");
+        $dig = strtoupper($this->input->post("dig"));
         $nick = $this->input->post("nick");
         $pass = $this->input->post("pass");
 
-
-        $rutFin = $rut . "-" . $dig;
-        $data = array(
-            'nombre_usuario' => $nombre,
-            'apellido_usuario' => $apellido,
-            'rut' => $rutFin,
-            'id_rol' => 3,
-            'nickname' => $nick,
-            'password' => md5($pass)
-        );
-
-        $this->modelo->regBodeguero($data);
+        if ($this->rutValido($rut) == $dig) {
+            $rutFin = $rut . "-" . $dig;
+            $data = array(
+                'nombre_usuario' => $nombre,
+                'apellido_usuario' => $apellido,
+                'rut' => $rutFin,
+                'id_rol' => 3,
+                'nickname' => $nick,
+                'password' => md5($pass)
+            );
+            
+          $this->modelo->regBodeguero($data);  
+        }
+        
+        else{
+            //esta wea la puse para ver si me mandaba a otro lado con el error
+            $this->load->view("historia");
+        }
+        
     }
-    
-   function mostrarPro() {
+
+    function mostrarPro() {
         $datos['arrProductos'] = $this->modelo->mostrarProductos();
         $this->load->view("productos", $datos);
     }
-    
+
     function mostrarBod() {
         $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
         $this->load->view("bodegueros", $datos);
@@ -273,7 +279,7 @@ class Controlador extends CI_Controller {
         $this->load->view("intranet");
         $this->load->view("footer");
     }
-    
+
     function eliminarPro() {
         $id = $this->uri->segment(3);
         $this->modelo->eliminarProducto($id);
@@ -318,7 +324,7 @@ class Controlador extends CI_Controller {
         $id = $this->uri->segment(3);
         $obtenerProducto = $this->modelo->obtenerProducto($id);
 
-        if ($obtenerProducto!= FALSE) {
+        if ($obtenerProducto != FALSE) {
             foreach ($obtenerProducto->result() as $row) {
                 $nombre = $row->nombre_producto;
                 $precio = $row->precio_por_unidad;
@@ -341,7 +347,7 @@ class Controlador extends CI_Controller {
         $this->load->view("editarPro", $data);
         $this->load->view("footer");
     }
-    
+
     function editarBod() {
         $id = $this->uri->segment(3);
         $data = array(
@@ -357,7 +363,7 @@ class Controlador extends CI_Controller {
         $this->load->view("intranet");
         $this->load->view("footer");
     }
-    
+
     function editarPro() {
         $id = $this->uri->segment(3);
         $data = array(
@@ -374,5 +380,11 @@ class Controlador extends CI_Controller {
         $this->load->view("footer");
     }
 
-    
+    function rutValido($r) {
+        $s = 1;
+        for ($m = 0; $r != 0; $r/=10)
+            $s = ($s + $r % 10 * (9 - $m++ % 6)) % 11;
+        return chr($s ? $s + 47 : 75);
+    }
+
 }

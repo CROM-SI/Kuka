@@ -3,5 +3,6 @@
     <div id="paginaLogin">
     </div>
     <div id="mensaje" title="Validar Login"></div>
+    <div id="mensajeError" title="Información"></div>
 </div>
 

@@ -1,3 +1,5 @@
+ </div>
+
 <div id="footer">
 
     <footer>

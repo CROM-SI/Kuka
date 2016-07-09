@@ -24,7 +24,7 @@
 
 
 
-
+        
         <ul  >
             <li > <a href="<?= base_url() ?>Controlador/cargarInicio" >Inicio</a></li>
 
@@ -33,11 +33,16 @@
             <li><a href="<?= base_url() ?>Controlador/cargarQuienesSomos">Quienes Somos</a></li>
 
             <li>  <a href="<?= base_url() ?>Controlador/cargarHistoria">Historia</a> </li>
+            
+            <li id="soli">  <a href="<?= base_url() ?>Controlador/cargarSolicitud">Solicitud</a> </li> 
             <div  id="menuser">
+             
             <li> <a href="<?= base_url() ?>Controlador/cargarPedido" >Clientes</a></li>
             <li> <a href="<?= base_url() ?>Controlador/intranet" >Empresa</a></li>
             </div>
         </ul>  
 
         <br/>
-
+<div id="probando">
+            
+       

@@ -82,16 +82,13 @@ function cargarContent2() {
                     botonLogin2();
 
 
-<<<<<<< HEAD
+
             });
-            $("#btnalmacen").button();
+          
+
+               
             
-            
-        }
-=======
-                });
             }
->>>>>>> origin/master
     );
 }
 //function guardar() {
@@ -175,7 +172,7 @@ function cargarRegistroCli() {
 
                 );
             }
-    )
+    );
 }
 
 function cargarIngresaPro() {
@@ -370,23 +367,23 @@ function cargarVerBod() {
 
 
             }
-    )
+    );
 }
 
-<<<<<<< HEAD
-function cargarAlmacen(){
-    $.post(
-            base_url + "Controlador/cargarAlmacen",
-            {
-                    
-            },
-            function (pagina) {
-                
-                $("#paginaLogin2").html(pagina);
-                
-                $("#btnalmacen").click( function () {
-                            btnalmacen1();
-=======
+//<<<<<<< HEAD
+//function cargarAlmacen(){
+//    $.post(
+//            base_url + "Controlador/cargarAlmacen",
+//            {
+//                    
+//            },
+//            function (pagina) {
+//                
+//                $("#paginaLogin2").html(pagina);
+//                
+//                $("#btnalmacen").click( function () {
+//                            btnalmacen1();
+//=======
 function cargarVerPro() {
 
     $.post(
@@ -410,7 +407,7 @@ function cargarVerPro() {
 
 
             }
-    )
+    );
 }
 
 function cargarSolicitud() {
@@ -436,7 +433,7 @@ function cargarSolicitud() {
 
 
             }
-    )
+    );
 }
 
 function cargarEditar() {
@@ -452,19 +449,19 @@ function cargarEditar() {
                 $("#btn_editarBod").click(
                         function () {
 
->>>>>>> origin/master
+
                         }
 
                 );
             }
-<<<<<<< HEAD
+
     );
 }
 
-=======
-    )
-}
+
+
+    
 
 
 
->>>>>>> origin/master
+

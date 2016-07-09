@@ -19,6 +19,18 @@ $(document).ready(function () {
             }
         }
     });
+
+
+    $("#mensajeError").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            Ok: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+
     $("#ventanaEli").dialog({
         autoOpen: false,
         modal: true,
@@ -83,15 +95,15 @@ function botonLogin() {
                 usuario: $("#nickname").val(),
                 clave: $("#password").val()
             },
-    function (vector) {
-        if (vector.valido === false) {
-            $("#mensaje").html("<p>" + vector.mensaje + "</p>");
-            $("#mensaje").dialog("open");
-        } else {
-            $("#tablaUsuario").html('');
-        }
-        cargarContent();
-    },
+            function (vector) {
+                if (vector.valido === false) {
+                    $("#mensaje").html("<p>" + vector.mensaje + "</p>");
+                    $("#mensaje").dialog("open");
+                } else {
+                    $("#tablaUsuario").html('');
+                }
+                cargarContent();
+            },
             'json'
             );
 }
@@ -102,15 +114,15 @@ function botonLogin2() {
                 usuario: $("#nickname2").val(),
                 clave: $("#password2").val()
             },
-    function (vector) {
-        if (vector.valido === false) {
-            $("#mensaje2").html("<p>" + vector.mensaje + "</p>");
-            $("#mensaje2").dialog("open");
-        } else {
-            $("#tablaUsuario").html('');
-        }
-        cargarContent2();
-    },
+            function (vector) {
+                if (vector.valido === false) {
+                    $("#mensaje2").html("<p>" + vector.mensaje + "</p>");
+                    $("#mensaje2").dialog("open");
+                } else {
+                    $("#tablaUsuario").html('');
+                }
+                cargarContent2();
+            },
             'json'
             );
 }
@@ -165,7 +177,7 @@ function cargarRegistroBod() {
                 $("#menuAdm").hide();
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
-             $("#btn_botReg").click(
+                $("#btn_botReg").click(
                         function () {
 
                             regBodega();
@@ -195,32 +207,33 @@ function regBodega() {
     var error = false;
 
     if (!error && nombre.trim().length <= 0) {
-        $("#mensaje").html("<p>Nombre no ingresado o Erroneo</p>");
+        $("#mensajeError").html("<p>Nombre no ingresado o Erroneo</p>");
         error = true;
     }
     if (!error && apellido.trim().length <= 0) {
-        $("#mensaje").html("<p>Apellido no ingresado o Erroneo</p>");
+        $("#mensajeError").html("<p>Apellido no ingresado o Erroneo</p>");
         error = true;
     }
     if (!error && rut.trim().length <= 0) {
-        $("#mensaje").html("<p>Rut no ingresado o Erroneo</p>");
+        $("#mensajeError").html("<p>Rut no ingresado o Erroneo</p>");
         error = true;
     }
     if (!error && dig.trim().length <= 0) {
-        $("#mensaje").html("<p>Digito no ingresado o Erroneo</p>");
+        $("#mensajeError").html("<p>Digito no ingresado o Erroneo</p>");
         error = true;
     }
     if (!error && nick.trim().length <= 0) {
-        $("#mensaje").html("<p>Nickname no ingresado o Erroneo</p>");
+        $("#mensajeError").html("<p>Nickname no ingresado o Erroneo</p>");
         error = true;
     }
     if (!error && pass.trim().length <= 0) {
-        $("#mensaje").html("<p>Password no ingresada o Erronea</p>");
+        $("#mensajeError").html("<p>Password no ingresada o Erronea</p>");
         error = true;
     }
 
     if (error) {
-        $("#mensaje").dialog("open");
+        $("#mensajeError").dialog("open");
+
     } else {
         $.post(
                 base_url + "Controlador/registrarBod",
@@ -234,8 +247,8 @@ function regBodega() {
 
                 },
                 function () {
-                    $("#mensaje").html("<p>Bedeguero Registrado Exitosamente</p>");
-                    $("#mensaje").dialog("open");
+                    $("#mensajeError").html("<p>Bedeguero Registrado Exitosamente</p>");
+                    $("#mensajeError").dialog("open");
                 });
     }
 
@@ -260,9 +273,9 @@ function cargarVerBod() {
 
                 $(".btn_eliminar").button();
                 $(".btn_editar").button();
-                
-                
-                
+
+
+
             }
     )
 }
@@ -286,9 +299,9 @@ function cargarVerPro() {
 
                 $(".btn_eliminar").button();
                 $(".btn_editar").button();
-                
-                
-                
+
+
+
             }
     )
 }
@@ -312,9 +325,9 @@ function cargarSolicitud() {
 
                 $(".btn_eliminar").button();
                 $(".btn_editar").button();
-                
-                
-                
+
+
+
             }
     )
 }

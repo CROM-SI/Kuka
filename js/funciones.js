@@ -163,7 +163,7 @@ function cargarIngresaPro() {
                             $("#nombrePro").val('');
                             $("#precioPro").val('');
                             $("#stockPro").val('');
-                            $("#categoria").val('');
+                            $("#categoria").val('0');
                             $("#nombrePro").focus();
 
                         }

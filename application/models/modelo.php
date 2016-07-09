@@ -90,5 +90,13 @@ class Modelo extends CI_Model{
         }
     }
     
+     function regBodeguero($data) {
+        $this->db->insert('usuario', $data);
+    }
+    
+    
+    
+    
+    
 }
 ?>

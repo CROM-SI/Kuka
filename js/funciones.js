@@ -163,14 +163,80 @@ function cargarRegistroBod() {
                 $("#menuAdm").hide();
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
-                $("#btn_regBod").click(
+             $("#btn_botReg").click(
                         function () {
 
+                            regBodega();
+                            $("nombreBod").val('');
+                            $("apellidoBod").val('');
+                            $("rutBod").val('');
+                            $("digitoBod").val('');
+                            $("nicknameBod").val('');
+                            $("passwordBod").val('');
+                            $("nombreBod").focus();
                         }
 
                 );
             }
-    )
+    );
+}
+
+function regBodega() {
+    var nombre = $("#nombreBod").val();
+    var apellido = $("#apellidoBod").val();
+    var rut = $("#rutBod").val();
+    var dig = $("#digitoBod").val();
+    var nick = $("#nicknameBod").val();
+    var pass = $("#passwordBod").val();
+
+
+    var error = false;
+
+    if (!error && nombre.trim().length <= 0) {
+        $("#mensaje").html("<p>Nombre no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && apellido.trim().length <= 0) {
+        $("#mensaje").html("<p>Apellido no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && rut.trim().length <= 0) {
+        $("#mensaje").html("<p>Rut no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && dig.trim().length <= 0) {
+        $("#mensaje").html("<p>Digito no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && nick.trim().length <= 0) {
+        $("#mensaje").html("<p>Nickname no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && pass.trim().length <= 0) {
+        $("#mensaje").html("<p>Password no ingresada o Erronea</p>");
+        error = true;
+    }
+
+    if (error) {
+        $("#mensaje").dialog("open");
+    } else {
+        $.post(
+                base_url + "Controlador/registrarBod",
+                {
+                    nombre: nombre,
+                    apellido: apellido,
+                    rut: rut,
+                    dig: dig,
+                    nick: nick,
+                    pass: pass
+
+                },
+                function () {
+                    $("#mensaje").html("<p>Bedeguero Registrado Exitosamente</p>");
+                    $("#mensaje").dialog("open");
+                });
+    }
+
 }
 
 function cargarVerBod() {

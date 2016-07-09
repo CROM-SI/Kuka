@@ -228,24 +228,25 @@ class Controlador extends CI_Controller {
 
     function registrarBod() {
 
-        $nombre = $this->input->post("nombreBod");
-        $apellido = $this->input->post("apellidoBod");
-        $rut = $this->input->post("rutBod");
-        $nickname = $this->input->post("nicknameBod");
-        $password = $this->input->post("passwordBod");
+        $nombre = $this->input->post("nombre");
+        $apellido = $this->input->post("apellido");
+        $rut = $this->input->post("rut");
+        $dig = $this->input->post("dig");
+        $nick = $this->input->post("nick");
+        $pass = $this->input->post("pass");
 
-        $data = array('nombre_usuario' => $nombre,
+
+        $rutFin = $rut . "-" . $dig;
+        $data = array(
+            'nombre_usuario' => $nombre,
             'apellido_usuario' => $apellido,
-            'rut' => $rut,
+            'rut' => $rutFin,
             'id_rol' => 3,
-            'nickname' => $nickname,
-            'password' => md5($password));
+            'nickname' => $nick,
+            'password' => md5($pass)
+        );
 
-        $this->db->insert('usuario', $data);
-
-        $this->load->view("header");
-        $this->load->view("intranet");
-        $this->load->view("footer");
+        $this->modelo->regBodeguero($data);
     }
 
     function mostrarBod() {

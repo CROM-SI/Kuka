@@ -93,14 +93,14 @@ class Controlador extends CI_Controller {
         echo json_encode($data);
     }
 
-    function salir() {
+    function salir2() {
         $this->session->sess_destroy();
         $this->load->view("header");
         $this->load->view("pedido");
         $this->load->view("footer");
     }
 
-    function salir2() {
+    function salir() {
         $this->session->sess_destroy();
         $this->load->view("header");
         $this->load->view("intranet");

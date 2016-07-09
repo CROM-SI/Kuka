@@ -34,8 +34,8 @@ class Controlador extends CI_Controller {
 
     function cargarContent2() {
         if ($this->session->userdata('login2') == true) {
-            $data['producto'] = $this->modelo->consultaproducto()->result();
-            $data['usuario'] = $this->session->userdata("usuario");
+             $data['producto'] = $this->modelo->consultaproducto()->result();
+             $data['usuario'] = $this->session->userdata("usuario");
 
                 $data['activo'] = 0;
                 $this->load->view("Cliente", $data);
@@ -185,14 +185,14 @@ class Controlador extends CI_Controller {
     }
     
     function cargarIngresarPro(){
-        
         $this->load->view("ingresarProducto");
         
     }
     
     function cargaralmacen(){
-        
-         $this->load->view("almacen");
+        $nombre = $this->input->post("btncarrito");
+        $datos['carrito'] = $this->modelo->mostrarcarrito($nombre)->result();
+         $this->load->view("almacen",$datos);
     }
     
     function ingresarProducto(){
@@ -241,5 +241,32 @@ class Controlador extends CI_Controller {
         $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
         $this->load->view("bodegueros",$datos);
     }
-
+   
+ function almacencarrito(){
+     
+//     $datos = $this->modelo->consultaproducto()->result();
+     if ($this->session->userdata('login2') == true) {
+         $nomb = $this->input->post("nombreC");
+         $pre = $this->input->post("precioC");
+         $x  = $this->input->post("cantidadC");
+         $nombre =$this->input->post("nombreCl");
+         
+         $data = 
+         array(
+           'nombre_producto' => $nomb,
+           'precio_por_unidad' => $pre,
+           'cantidad' => $x,
+           'nombre_us'=>$nombre
+              
+           );
+          
+          $this->db->insert('carrito', $data);
+          
+     }
+     
+     
+     
+    
+     
+ }
 }

@@ -39,6 +39,7 @@ class Modelo extends CI_Model{
         }
         return $perfil;
     }
+   
     
     
     
@@ -46,9 +47,11 @@ class Modelo extends CI_Model{
     function consultaproducto(){
        $this->db->select('nombre_producto,precio_por_unidad,id_producto,stok_producto');
        $this->db->from("producto");
+       
          $data = $this->db->get();
         return $data;
     }
+    
     
     function mostrarBodegueros(){
        $this->db->select('nombre_usuario,apellido_usuario,rut');
@@ -59,6 +62,15 @@ class Modelo extends CI_Model{
         }else{
             return false;
         }
+    }
+    function  mostrarcarrito($nombreU){
+       
+        $this->db->select('nombre_producto,precio_por_unidad,cantidad,nombre_us'); 
+         $this->db->where("nombre_us",$nombreU);
+        $this->db->from('carrito');
+        $res = $this->db->get();
+        return $res;
+         
     }
     
     

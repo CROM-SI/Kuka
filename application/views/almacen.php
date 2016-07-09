@@ -1,5 +1,23 @@
 <div id="content">
-    <h1>Hola</h1>
-    
+
+    <table>
+        <tr>
+            <td align="center"><h5>Producto</h5></td>
+            <td align="center"><h5>Precio</h5></td>
+            <td align="center"><h5>Cantidad</h5></td>
+        </tr>  
+        <tr>
+            
+            <?php foreach ($carrito as $i){ ?>
+                <tr>
+                <td> <?=$i->nombre_producto?> </td>
+                <td> <?=$i->precio_por_unidad?></td>
+                <td> <?=$i->cantidad?></td>
+                </tr>
+            
+            <?php }?>
+        </tr>  
+    </table>
+ 
 </div>
 

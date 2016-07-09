@@ -58,9 +58,36 @@ function cargarContent2(){
                 botonLogin2();
                 
 
+
             });
+            $("#btnalmacen").button();
+            
+            
         }
     );
+}
+//function guardar() {
+//    $.post(
+//            base_url+"Controlador/cargarContent2",
+//            {
+//                nonbre : $("#nombreC").val(),
+//                precio : $("#precioC").val(),
+//                cantidad :$("#cantidad").val()
+//                
+//                
+//                
+//                
+//                
+//            }
+//);}
+
+function btnalmacen1(){
+    $.post(
+            base_url+"Controlador/cargaralmacen",
+            {
+                nombre : $("btnalmacen").val()
+            });
+   
 }
 
 
@@ -185,5 +212,24 @@ function cargarVerBod() {
                 );
             }
     )
+}
+
+function cargarAlmacen(){
+    $.post(
+            base_url + "Controlador/cargarAlmacen",
+            {
+                    
+            },
+            function (pagina) {
+                
+                $("#paginaLogin2").html(pagina);
+                
+                $("#btnalmacen").click( function () {
+                            btnalmacen1();
+                        }
+
+                );
+            }
+    );
 }
 

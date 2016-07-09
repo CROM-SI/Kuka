@@ -204,21 +204,18 @@ class Controlador extends CI_Controller {
     }
 
     function ingresarProducto() {
-        $nombre = $this->input->post("nombrePro");
-        $precio = $this->input->post("precioPro");
-        $stock = $this->input->post("stockPro");
-        $categoria = $this->input->post("categoria");
+        $nombre = $this->input->post("nombre");
+        $precio = $this->input->post("precio");
+        $stock = $this->input->post("stock");
+        $categoria = $this->input->post("categ");
 
         $data = array('nombre_producto' => $nombre,
             'precio_por_unidad' => $precio,
             'stok_producto' => $stock,
             'id_categoria' => $categoria
         );
-        $this->db->insert('producto', $data);
 
-        $this->load->view("header");
-        $this->load->view("intranet");
-        $this->load->view("footer");
+        $this->modelo->regProducto($data);
     }
 
     function cargarNuevoBodeguero() {
@@ -244,15 +241,12 @@ class Controlador extends CI_Controller {
                 'nickname' => $nick,
                 'password' => md5($pass)
             );
-            
-          $this->modelo->regBodeguero($data);  
-        }
-        
-        else{
+
+            $this->modelo->regBodeguero($data);
+        } else {
             //esta wea la puse para ver si me mandaba a otro lado con el error
             $this->load->view("historia");
         }
-        
     }
 
     function mostrarPro() {
@@ -264,7 +258,7 @@ class Controlador extends CI_Controller {
         $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
         $this->load->view("bodegueros", $datos);
     }
-    
+
     function mostrarSolicitud() {
         $datos['arrSolicitud'] = $this->modelo->mostrarSolicitud();
         $this->load->view("solicitudes", $datos);

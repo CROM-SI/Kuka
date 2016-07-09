@@ -8,7 +8,7 @@
     <br/>
     <h10 class="campoenrojo">*</h10>
     Nombre: <input type="text" id="nombreBod"required="true"
-                   maxlength="10" 
+                   maxlength="10"
                    style="
                                color:black;
                                margin-left: 9%;
@@ -17,7 +17,7 @@
                                border-radius: 6px"/>
     <br/>
     <h10 class="campoenrojo">*</h10>
-    Apellido: <input type="text" id="apellidoBod" required="true"
+    Apellido: <input type="text" id="apellidoBod" required="true" maxlength="10"
                      style="
                                color:black;
                                margin-left: 9%;
@@ -26,13 +26,13 @@
                                border-radius: 6px"/>
     <br/>
     <h10 class="campoenrojo">*</h10>
-    Rut: <input type="text" id="rutBod" required="true"
+    Rut: <input type="text" id="rutBod" required="true" maxlength="8"
                 style="color:black;
                           margin-left: 14%;
                           margin-bottom:2%;
                           width: 32%;
                           border-radius: 6px"/>
-     <input type="text"  id="digitoBod" 
+     <input type="text"  id="digitoBod" maxlength="1"
                style="color:black;
                margin-left: 4%;
                margin-bottom:2%;
@@ -40,7 +40,7 @@
                border-radius: 6px" />
     <br/>
     <h10 class="campoenrojo">*</h10>
-    Nickname: <input type="text" id="nicknameBod"  required="true"
+    Nickname: <input type="text" id="nicknameBod"  required="true" maxlength="15"
                      style="
                                color:black;
                                margin-left: 8%;
@@ -49,7 +49,7 @@
                                border-radius: 6px"/>
     <br/>
     <h10 class="campoenrojo">*</h10>
-    Password: <input type="text" id="passwordBod" required="true"
+    Password: <input type="text" id="passwordBod" required="true" maxlength="15"
                      style="
                                color:black;
                                margin-left: 9%;

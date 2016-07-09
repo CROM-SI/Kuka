@@ -210,18 +210,29 @@ select {
 }
 
 
-
 /*estilo de los botones de cliente y personal empresa*/
 #btn_regBod{
     background: green;
+    border-radius: 15px 15px 15px 15px;
 }
 
 #btn_regBod:hover{
+      
+    background: black;
+}
+#btn_sol{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+
+#btn_sol:hover{
     background: black;
 }
 
+
 #btn_Prod{
     background: green;
+    border-radius: 15px 15px 15px 15px;
 }
 #btn_Prod:hover{
     background:black; 
@@ -229,6 +240,7 @@ select {
 
 #btn_regCli{
     background: green;
+    border-radius: 15px 15px 15px 15px;
 }
 
 #btn_regCli:hover{
@@ -236,13 +248,22 @@ select {
 }
 #btn_verBod{
     background: green;
+    border-radius: 15px 15px 15px 15px;
 }
 #btn_verBod:hover{
+    background: black;
+}
+#btn_VerPro{
+    background: green;
+    border-radius: 15px 15px 15px 15px;
+}
+#btn_VerPro:hover{
     background: black;
 }
 
 #salirAdm{
     background: green;
+    border-radius: 15px 15px 15px 15px;
 }
 
 #salirAdm:hover{
@@ -251,6 +272,7 @@ select {
 
 #salirCliente{
     background: green;
+    border-radius: 15px 15px 15px 15px;
 }
 
 #salirCliente:hover{
@@ -259,11 +281,13 @@ select {
 
 #btn_login{
     background: green;
+    border-radius: 15px 15px 15px 15px;
     margin-left: 45%;
 }
 
 #btn_login2{
     background: green;
+    border-radius: 15px 15px 15px 15px;
     margin-left: 45%;
 }
 

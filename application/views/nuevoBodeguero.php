@@ -8,6 +8,7 @@
     <br/>
     <h10 class="campoenrojo">*</h10>
     Nombre: <input type="text" id="nombreBod"required="true"
+                   maxlength="10" 
                    style="
                                color:black;
                                margin-left: 9%;

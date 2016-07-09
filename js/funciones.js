@@ -55,6 +55,7 @@ function cargarContent() {
                 $("#guardarCli").button();
                 $("#btn_verBod").button();
                 $("#btn_VerPro").button();
+                $("#btn_sol").button();
 
             }
     );
@@ -277,6 +278,32 @@ function cargarVerPro() {
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
                 $("#btn_VerPro").click(
+                        function () {
+
+                        }
+
+                );
+
+                $(".btn_eliminar").button();
+                $(".btn_editar").button();
+                
+                
+                
+            }
+    )
+}
+
+function cargarSolicitud() {
+
+    $.post(
+            base_url + "Controlador/mostrarSolicitud",
+            {
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_sol").click(
                         function () {
 
                         }

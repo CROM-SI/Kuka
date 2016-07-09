@@ -70,6 +70,16 @@ class Modelo extends CI_Model{
             return false;
         }
     }
+    
+    function mostrarSolicitud(){
+       $this->db->select("*");
+       $res = $this->db->get('solicitud');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
             
     function eliminarBodeguero($id){
         $this->db->where('id_usuario',$id);

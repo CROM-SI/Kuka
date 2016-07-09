@@ -3,7 +3,8 @@
 
     <br>
     <br>
-
+    <a href="#" id="btn_sol" onclick="cargarSolicitud()">Solicitudes </a>
+    <br/><br/>
     <a href="#" id="btn_regBod" onclick="cargarRegistroBod()">Registrar Nuevo Encargado de bodega </a>
     <br/><br/>
     <a href="#" id="btn_verBod" onclick="cargarVerBod()">Ver encargados de bodega </a>

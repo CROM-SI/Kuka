@@ -258,6 +258,11 @@ class Controlador extends CI_Controller {
         $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
         $this->load->view("bodegueros", $datos);
     }
+    
+    function mostrarSolicitud() {
+        $datos['arrSolicitud'] = $this->modelo->mostrarSolicitud();
+        $this->load->view("solicitudes", $datos);
+    }
 
     function eliminarBod() {
         $id = $this->uri->segment(3);

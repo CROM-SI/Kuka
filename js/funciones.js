@@ -157,15 +157,71 @@ function cargarIngresaPro() {
                 $("#menuAdm").hide();
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
-                $("#btn_Prod").click(
+                $("#ingresarPro").click(
                         function () {
+                            registrarProducto();
+                            $("#nombrePro").val('');
+                            $("#precioPro").val('');
+                            $("#stockPro").val('');
+                            $("#categoria").val('');
+                            $("#nombrePro").focus();
 
                         }
 
                 );
             }
-    )
+    );
 }
+
+function registrarProducto(){
+    
+     var nombre = $("#nombrePro").val();
+    var precio = $("#precioPro").val();
+    var stock = $("#stockPro").val();
+    var categ = $("#categoria").val();
+
+
+    var error = false;
+
+    if (!error && nombre.trim().length <= 0) {
+        $("#mensajeError").html("<p>Nombre no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && precio.trim().length <= 0) {
+        $("#mensajeError").html("<p>Precio no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && stock.trim().length <= 0) {
+        $("#mensajeError").html("<p>Stock no ingresado o Erroneo</p>");
+        error = true;
+    }
+    if (!error && categ.trim().length <= 0) {
+        $("#mensajeError").html("<p>Categoria no seleccionada</p>");
+        error = true;
+    }
+   
+
+    if (error) {
+        $("#mensajeError").dialog("open");
+
+    } else {
+        $.post(
+                base_url + "Controlador/ingresarProducto",
+                {
+                    nombre: nombre,
+                    precio: precio,
+                    stock: stock,
+                    categ: categ
+
+                },
+                function () {
+                    $("#mensajeError").html("<p>Producto Ingresado Exitosamente</p>");
+                    $("#mensajeError").dialog("open");
+                });
+    }
+    
+}
+
 
 function cargarRegistroBod() {
 

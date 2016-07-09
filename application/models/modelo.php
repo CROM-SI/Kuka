@@ -125,6 +125,10 @@ class Modelo extends CI_Model{
     }
     
     
+     function regProducto($data) {
+        $this->db->insert('producto', $data);
+    }
+    
     
     
     

@@ -11,7 +11,10 @@
     <a href="#" id="btn_regCli" onclick="cargarRegistroCli()" >Registrar nuevo Cliente</a>
     <br><br>
     <a href="#" id="btn_Prod" onclick="cargarIngresaPro()">Ingresar Productos </a>
-    <br/><br/> <br/><br/>
+    <br/><br/> 
+    <a href="#" id="btn_VerPro" onclick="cargarVerPro()">Ver Productos </a>
+    <br/><br/>
+    <br/><br/>
     <a id="salirAdm"  href="<?=base_url()?>Controlador/salir">Salir</a>
 </div>
 

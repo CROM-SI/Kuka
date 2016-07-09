@@ -61,14 +61,29 @@ class Modelo extends CI_Model{
         }
     }
     
+    function mostrarProductos(){
+       $this->db->select("*");
+       $res = $this->db->get('producto');
+        if($res->num_rows()>0){
+            return $res;
+        }else{
+            return false;
+        }
+    }
+            
     function eliminarBodeguero($id){
         $this->db->where('id_usuario',$id);
         $this->db->delete('usuario');
     }
     
-    function obtenerNombre($id){
-        $this->db->where('id_usuario',$id);
-        $res = $this->db->get('usuario');
+    function eliminarProducto($id){
+        $this->db->where('id_producto',$id);
+        $this->db->delete('producto');
+    }
+    
+    function obtenerProducto($id){
+        $this->db->where('id_producto',$id);
+        $res = $this->db->get('producto');
         if($res->num_rows()>0){
             return $res;
         }else{
@@ -79,6 +94,11 @@ class Modelo extends CI_Model{
     function editarBodeguero($id,$data){
         $this->db->where('id_usuario',$id);
         $this->db->update('usuario',$data);
+    }
+    
+    function editarProducto($id,$data){
+        $this->db->where('id_producto',$id);
+        $this->db->update('producto',$data);
     }
     
     function consultaCategoria() {

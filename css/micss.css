@@ -81,6 +81,12 @@ li a, .dropbtn {
 .campoenrojo{
     color: red;
 }
+select {
+      width: 200px;
+}
+#categoria{
+    
+}
 
 
 #tabs{

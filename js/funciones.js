@@ -54,6 +54,7 @@ function cargarContent() {
                 $("#salirAdm").button();
                 $("#guardarCli").button();
                 $("#btn_verBod").button();
+                $("#btn_VerPro").button();
 
             }
     );
@@ -250,6 +251,32 @@ function cargarVerBod() {
                 $("#menuAdm").html(pagina);
                 $("#menuAdm").show('fast');
                 $("#btn_verBod").click(
+                        function () {
+
+                        }
+
+                );
+
+                $(".btn_eliminar").button();
+                $(".btn_editar").button();
+                
+                
+                
+            }
+    )
+}
+
+function cargarVerPro() {
+
+    $.post(
+            base_url + "Controlador/mostrarPro",
+            {
+            },
+            function (pagina) {
+                $("#menuAdm").hide();
+                $("#menuAdm").html(pagina);
+                $("#menuAdm").show('fast');
+                $("#btn_VerPro").click(
                         function () {
 
                         }

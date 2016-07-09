@@ -248,7 +248,12 @@ class Controlador extends CI_Controller {
 
         $this->modelo->regBodeguero($data);
     }
-
+    
+   function mostrarPro() {
+        $datos['arrProductos'] = $this->modelo->mostrarProductos();
+        $this->load->view("productos", $datos);
+    }
+    
     function mostrarBod() {
         $datos['arrBodegueros'] = $this->modelo->mostrarBodegueros();
         $this->load->view("bodegueros", $datos);
@@ -257,6 +262,16 @@ class Controlador extends CI_Controller {
     function eliminarBod() {
         $id = $this->uri->segment(3);
         $this->modelo->eliminarBodeguero($id);
+
+
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
+    
+    function eliminarPro() {
+        $id = $this->uri->segment(3);
+        $this->modelo->eliminarProducto($id);
 
 
         $this->load->view("header");
@@ -293,6 +308,35 @@ class Controlador extends CI_Controller {
         $this->load->view("footer");
     }
 
+    function cargarEditarPro() {
+
+        $id = $this->uri->segment(3);
+        $obtenerProducto = $this->modelo->obtenerProducto($id);
+
+        if ($obtenerProducto!= FALSE) {
+            foreach ($obtenerProducto->result() as $row) {
+                $nombre = $row->nombre_producto;
+                $precio = $row->precio_por_unidad;
+                $stock = $row->stok_producto;
+                $categoria = $row->id_categoria;
+            }
+
+            $data = array('id_producto' => $id,
+                'nombre_producto' => $nombre,
+                'precio_por_unidad' => $precio,
+                'stok_producto' => $stock,
+                'id_categoria' => $categoria,
+            );
+        } else {
+            $data = "";
+            return FALSE;
+        }
+
+        $this->load->view("header");
+        $this->load->view("editarPro", $data);
+        $this->load->view("footer");
+    }
+    
     function editarBod() {
         $id = $this->uri->segment(3);
         $data = array(
@@ -303,6 +347,22 @@ class Controlador extends CI_Controller {
         );
 
         $this->modelo->editarBodeguero($id, $data);
+
+        $this->load->view("header");
+        $this->load->view("intranet");
+        $this->load->view("footer");
+    }
+    
+    function editarPro() {
+        $id = $this->uri->segment(3);
+        $data = array(
+            'nombre_producto' => $this->input->post("nombrePro"),
+            'precio_por_unidad' => $this->input->post("precioPro"),
+            'stok_producto' => $this->input->post("stock"),
+            'id_categoria' => $this->input->post("categoria")
+        );
+
+        $this->modelo->editarProducto($id, $data);
 
         $this->load->view("header");
         $this->load->view("intranet");

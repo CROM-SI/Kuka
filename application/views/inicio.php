@@ -21,7 +21,7 @@
                 </div>
                 
                 
-<!--                //HAGAN LA WEA BIEN CAUROS CULIAOS DESORGANIZADOS DE MIERDA---->
+<!--                //HAGAN LA WEA BIEN CAUROS CULIAOS.. DESORGANIZADOS DE MIERDA---->
                 
                 
                 

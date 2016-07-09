@@ -46,15 +46,15 @@ class Controlador extends CI_Controller {
     }
 
     function validaLogin() {
-        $usuario = $this->input->post("usuario");
+        $nickname = $this->input->post("nickname");
         $clave = $this->input->post("clave");
-        $resultado = $this->modelo->validarLogin($usuario, $clave);
+        $resultado = $this->modelo->validarLogin($nickname,$clave);
         if ($resultado == true) {
-            $perfil = $this->modelo->consultaPerfil($usuario);
+            $perfil = $this->modelo->consultaPerfil($nickname);
             $data['mensaje'] = "Usuario Válido";
             $data['valido'] = true;
             $arreglo = array(
-                "usuario" => $usuario,
+                "usuario" => $nickname,
                 "login" => true,
                 "perfil" => $perfil
             );
@@ -120,6 +120,12 @@ class Controlador extends CI_Controller {
     function intranet() {
         $this->load->view("header");
         $this->load->view("intranet");
+        $this->load->view("footer");
+    }
+    
+    function cargarSolicitud() {
+        $this->load->view("header");
+        $this->load->view("enviarSolicitud");
         $this->load->view("footer");
     }
 
@@ -242,10 +248,17 @@ class Controlador extends CI_Controller {
                 'password' => md5($pass)
             );
 
+
             $this->modelo->regBodeguero($data);
-        } else {
+        
+
+            
+           echo "rut"; 
+         
+        }else{
+
             //esta wea la puse para ver si me mandaba a otro lado con el error
-            $this->load->view("historia");
+            echo"Rut no valido";
         }
     }
 
@@ -375,10 +388,43 @@ class Controlador extends CI_Controller {
     }
 
     function rutValido($r) {
+        
         $s = 1;
         for ($m = 0; $r != 0; $r/=10)
             $s = ($s + $r % 10 * (9 - $m++ % 6)) % 11;
+        
+        
         return chr($s ? $s + 47 : 75);
+    }
+    
+    function enviarSolicitud() {
+        $nombre = $this->input->post("nombreCliSo");
+        $apellido = $this->input->post("apellidoCliSo");
+        $rut = $this->input->post("rutCliSo");
+        $telefono = $this->input->post("telefonoCliSo");
+        $ciudad = $this->input->post("cuidadCliSo");
+        $correo = $this->input->post("correoCliSo");
+        $rol = $this->input->post("rolCliSo");
+        $direccion = $this->input->post("direccionCliSo");
+        
+
+
+        $data = array('nombre_cliente' => $nombre,
+            'apellido_cliente' => $apellido,
+            'direccion_local' => $direccion,
+            'telefono' => $telefono,
+            'ciudad' => $ciudad,
+            'rut_cliente' => $rut,
+            'rol_local' => $rol,
+            'correo' => $correo
+        );
+        
+        $this->db->insert("solicitud",$data);
+        
+        $this->load->view("header");
+        $this->load->view("enviarSolicitud");
+        $this->load->view("footer");
+        
     }
 
 }

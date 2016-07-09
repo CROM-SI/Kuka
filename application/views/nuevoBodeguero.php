@@ -60,6 +60,7 @@
     <button id="btn_botReg" style="margin-top: 5%; border: 1px black solid" class="btn btn-succes">Guardar</button>
     
     
+    
 </div>
 
 

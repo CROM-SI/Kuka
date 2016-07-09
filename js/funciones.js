@@ -92,18 +92,18 @@ function botonLogin() {
     $.post(
             base_url + "Controlador/validaLogin",
             {
-                usuario: $("#nickname").val(),
+                nickname: $("#nickname").val(),
                 clave: $("#password").val()
             },
-            function (vector) {
-                if (vector.valido === false) {
-                    $("#mensaje").html("<p>" + vector.mensaje + "</p>");
-                    $("#mensaje").dialog("open");
-                } else {
-                    $("#tablaUsuario").html('');
-                }
-                cargarContent();
-            },
+    function (vector) {
+        if (vector.valido === false) {
+            $("#mensaje").html("<p>" + vector.mensaje + "</p>");
+            $("#mensaje").dialog("open");
+        } else {
+            $("#tablaUsuario").html('');
+        }
+        cargarContent();
+    },
             'json'
             );
 }
@@ -114,15 +114,15 @@ function botonLogin2() {
                 usuario: $("#nickname2").val(),
                 clave: $("#password2").val()
             },
-            function (vector) {
-                if (vector.valido === false) {
-                    $("#mensaje2").html("<p>" + vector.mensaje + "</p>");
-                    $("#mensaje2").dialog("open");
-                } else {
-                    $("#tablaUsuario").html('');
-                }
-                cargarContent2();
-            },
+    function (vector) {
+        if (vector.valido === false) {
+            $("#mensaje2").html("<p>" + vector.mensaje + "</p>");
+            $("#mensaje2").dialog("open");
+        } else {
+            $("#tablaUsuario").html('');
+        }
+        cargarContent2();
+    },
             'json'
             );
 }
@@ -175,7 +175,7 @@ function cargarIngresaPro() {
 
 function registrarProducto(){
     
-     var nombre = $("#nombrePro").val();
+    var nombre = $("#nombrePro").val();
     var precio = $("#precioPro").val();
     var stock = $("#stockPro").val();
     var categ = $("#categoria").val();
@@ -251,6 +251,8 @@ function cargarRegistroBod() {
     );
 }
 
+
+
 function regBodega() {
     var nombre = $("#nombreBod").val();
     var apellido = $("#apellidoBod").val();
@@ -302,10 +304,14 @@ function regBodega() {
                     pass: pass
 
                 },
-                function () {
-                    $("#mensajeError").html("<p>Bedeguero Registrado Exitosamente</p>");
-                    $("#mensajeError").dialog("open");
-                });
+        function () {
+
+            $("#mensajeError").html("<p>Bedeguero Registrado Exitosamente</p>");
+            $("#mensajeError").dialog("open");
+
+
+
+        });
     }
 
 }

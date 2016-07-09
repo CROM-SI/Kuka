@@ -1,15 +1,15 @@
 <?php
 class Modelo extends CI_Model{
-    function validarLogin($nick, $clave){
-        /*$consulta = "select * from usuario 
-                    where nickname='".$nick."' and 
+    function validarLogin($nickname,$clave){
+        $consulta = "select * from usuario 
+                    where nickname='".$nickname."' and 
                     password ='".md5($clave)."'";
          $resultado = $this->db->query($consulta);
-         */
-        $this->db->select("*");
-        $this->db->where('nickname',$nick);
-        $this->db->where('password',md5($clave));
-        $resultado = $this->db->get('usuario');
+         
+//        $this->db->select("*");
+//        $this->db->where('nickname',$nick);
+//        $this->db->where('password',md5($clave));
+//        $resultado = $this->db->get('usuario');
         if($resultado->num_rows()>0){
             return true;
         }else{
@@ -30,9 +30,9 @@ class Modelo extends CI_Model{
         }
     }
     
-    function consultaPerfil($usuario) {
+    function consultaPerfil($nickname) {
         $this->db->select("id_rol");
-        $this->db->where('nickname', $usuario);
+        $this->db->where('nickname', $nickname);
         $respuesta = $this->db->get("usuario");
         foreach ($respuesta->result() as $valor) {
             $perfil = $valor->id_rol;

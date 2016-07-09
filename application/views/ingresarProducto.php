@@ -8,32 +8,32 @@
     <br/>
     <h10 class="campoenrojo">*</h10>
     Nombre: <input style="color:black;
-                   margin-left: 15%; 
+                   margin-left: 11%; 
                    margin-bottom:2%;
-                   width: 36%;
+                   width: 41%;
                    border-radius: 6px" 
                    type="text" id="nombrePro"  required="true" maxlength="20" />
     <br/>
     <h10 class="campoenrojo">*</h10>
     Precio: <input type="text" 
                    style="color:black;
-                   margin-left: 15%; 
-                   margin-bottom:1%; 
-                   width: 39%;
+                   margin-left: 13%; 
+                   margin-bottom:2%; 
+                   width: 41%;
                    border-radius: 6px"
                    id="precioPro"  required="true" maxlength="6" />
     <br/>
     <h10 class="campoenrojo">*</h10>
     Stock: <input type="text" 
                  style="color:black;
-                 margin-left: 15%; 
+                 margin-left: 14%; 
                  margin-bottom:2%; 
-                 width: 35%;
+                 width: 41%;
                  border-radius: 6px" 
                  id="stockPro"  required="true" maxlength="4" />
     <br/>
     <h10 class="campoenrojo">*</h10>Categoria:
-    <select id="categoria">
+    <select id="categoria" style="margin-left: 10%" >
         <option value="0">Seleccione</option>
         <?php
         foreach ($arrCategorias as $valor) {
@@ -43,7 +43,7 @@
     </select>
     <br/>
     
-    <button id="ingresarPro" class="btn btn-succes">Guardar</button>
+    <button id="ingresarPro"  style="margin-top: 5%; border: 1px black solid"class="btn">Guardar</button>
     
     
 </div>

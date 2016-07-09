@@ -100,7 +100,7 @@
                                border-radius: 6px"/>
         <br/>
         <br>
-        <button class="btn btn-succes" id="guardarCli">Guardar</button>
+        <button class="btn btn-succes" style="margin-top: 5%; border: 1px black solid" id="guardarCli">Guardar</button>
 
 
     </div>
